@@ -10,12 +10,11 @@ from sfagent.agent.state import RunState
 from sfagent.config import AppConfig
 from sfagent.tools.runner import SKIP_DIRS
 
-REQUIRED_FILES = ["main.py", "README.md", "requirements.txt", "DESIGN_DECISIONS.md", "TRACEABILITY.csv",
-                  "tests/test_ui_smoke.py"]
+REQUIRED_FILES = ["main.py", "README.md", "requirements.txt"]  # the task's deliverables (+ tests below)
 
 
 def missing_deliverables(root: Path, extra: list[str] | None = None) -> list[str]:
-    """Generic deliverables + any `required_files` from the selected task profile."""
+    """The task's deliverables (+ DESIGN_DECISIONS.md when the deviation switch is on)."""
     missing = [f for f in [*REQUIRED_FILES, *(extra or [])] if not (root / f).is_file()]
     if not list((root / "tests").glob("test_*.py")):
         missing.append("tests/test_*.py")

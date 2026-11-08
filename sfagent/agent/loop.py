@@ -19,15 +19,15 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any
 
-from sfagent.agent import prompts, spec_rules
+from sfagent.agent import prompts
 from sfagent.agent.context import ContextManager
 from sfagent.agent.import_check import run_import_check
+from sfagent.agent.launch_check import run_launch_check
 from sfagent.agent.planner import TodoList
 from sfagent.agent.profile import TaskProfile
 from sfagent.agent.report import REQUIRED_FILES, missing_deliverables, write_report
 from sfagent.agent.state import RunState
 from sfagent.agent.transcript import Transcript
-from sfagent.agent.ui_probe import run_ui_probe
 from sfagent.config import AppConfig
 from sfagent.llm.pricing import estimate_cost
 from sfagent.llm.provider import LLMError, LLMProvider, LLMResponse
@@ -74,7 +74,8 @@ class Agent:
         self.todos = TodoList()
         self.runner = PythonRunner(self.root, self.run_dir)
         self.ctx = ToolContext(sandbox=self.sandbox, read_state=ReadState(), todos=self.todos, runner=self.runner,
-                               approve_write=approve_write, on_todos=lambda t: self.emit("todos", todos=t))
+                               approve_write=approve_write, on_todos=lambda t: self.emit("todos", todos=t),
+                               record_deviations=cfg.record_deviations)
         self.registry = build_registry(self.ctx)
         self.context = ContextManager(self.run_dir)
         self.transcript = Transcript(self.run_dir / "transcript.jsonl")
@@ -110,8 +111,9 @@ class Agent:
             self.log(f"Resuming run at phase '{self.state.phase}' ({self.state.requests} requests so far).")
             self.emit("resume", phase=self.state.phase, fix_round=self.state.fix_round)
         else:
-            save_spec(self.spec, self.run_dir / "spec.json")
-            self.state = RunState(messages=prompts.initial_messages(self.spec, self.profile))
+            save_spec(prompts.architecture_only(self.spec), self.run_dir / "spec.json")
+            self._copy_inputs()
+            self.state = RunState(messages=prompts.initial_messages(self.spec, None, self.cfg.record_deviations))
         self.state.provider, self.state.model = self.provider.name, self.provider.model
         self.transcript.append("run_start", provider=self.provider.name, model=self.provider.model, resume=resume,
                                profile=self.profile.name if self.profile else None,
@@ -139,11 +141,19 @@ class Agent:
         self.emit("done", result=asdict(result) | {"report_path": str(report)})
         return result
 
+    def _copy_inputs(self) -> None:
+        """The original architecture documents, read-only for the model in agent_run/inputs/."""
+        dest = self.run_dir / "inputs"
+        for src in (self.cfg.doc_path, self.cfg.view_path):
+            if src and Path(src).is_file():
+                dest.mkdir(parents=True, exist_ok=True)
+                (dest / Path(src).name).write_bytes(Path(src).read_bytes())
+
     def _pipeline(self) -> None:
         s = self.state
         if s.phase == "plan":
             self._phase_event("plan")
-            self._run_phase("plan", prompts.PLAN_INSTRUCTIONS)
+            self._run_phase("plan", prompts.plan_instructions(self.cfg.record_deviations))
             self._apply_plan()
             s.phase = "implement"
             self._save()
@@ -177,9 +187,11 @@ class Agent:
         """Like ExitPlanMode: the harness persists the approved plan as files."""
         plan = self.ctx.plan or {}
         self.state.plan = plan
-        for rel, text in (("DESIGN_DECISIONS.md", plan.get("design_decisions", "")),
+        plan_rel = "DESIGN_DECISIONS.md" if self.cfg.record_deviations else "agent_run/plan.md"
+        for rel, text in ((plan_rel, plan.get("plan", "")),
                           ("AGENT_NOTES.md", "# AGENT_NOTES.md — agent memory\n\n" + (plan.get("notes") or ""))):
             path = self.root / rel
+            path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(text, encoding="utf-8", newline="\n")
             self.ctx.read_state.mark(path)
             self.ctx.written.add(rel)
@@ -288,17 +300,13 @@ class Agent:
 
     # ------------------------------------------------------------------ verification
     def verify(self) -> tuple[bool, str]:
-        """Harness-side self-verification: deliverables present, everything compiles, tests pass."""
+        """Harness-side check that the program RUNS (deliverables, compile, own tests, imports, start-up) —
+        nothing about features, layout or style."""
         parts, ok = [], True
-        missing = missing_deliverables(self.root, self.profile.required_files if self.profile else None)
+        missing = missing_deliverables(self.root, ["DESIGN_DECISIONS.md"] if self.cfg.record_deviations else None)
         if missing:
             ok = False
             parts.append("Missing required deliverables: " + ", ".join(missing))
-        smoke = self.root / "tests" / "test_ui_smoke.py"
-        if smoke.is_file() and "minsize" not in smoke.read_text(encoding="utf-8", errors="replace"):
-            ok = False
-            parts.append("tests/test_ui_smoke.py must build the UI headlessly and assert root.minsize() >= "
-                         "(1100, 750) (see the UI quality rules).")
         c_ok, c_out = self.runner.compile_all()
         parts.append(("COMPILE OK: " if c_ok else "COMPILE FAILED:\n") + c_out)
         ok &= c_ok
@@ -310,7 +318,7 @@ class Agent:
             i_ok, i_out = run_import_check(self.runner)
             parts.append(i_out)
             ok &= i_ok
-            u_ok, u_out = run_ui_probe(self.runner, requirements=spec_rules.derive(self.spec).to_probe())
+            u_ok, u_out = run_launch_check(self.runner)
             parts.append(u_out)
             ok &= u_ok
         report = "\n\n".join(parts)

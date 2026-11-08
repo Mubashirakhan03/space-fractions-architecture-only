@@ -537,7 +537,7 @@ def demo_provider() -> MockProvider:
             {"content": "Verify with compile + pytest", "status": "in_progress"}]
     return MockProvider([
         reply(tool_call("update_todos", "t1", todos=todos),
-              tool_call("submit_plan", "p1", design_decisions=_DESIGN, file_tree=[f["path"] for f in FILES],
+              tool_call("submit_plan", "p1", plan=_DESIGN, file_tree=[f["path"] for f in FILES],
                         notes=BANNER),
               content="(mock) Planning the demo project."),
         reply(tool_call("write_files", "w1", files={f["path"]: f["content"] for f in FILES}),

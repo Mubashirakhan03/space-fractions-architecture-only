@@ -123,16 +123,18 @@ def test_plan_mode_blocks_write_tools(reg):
     assert r.is_error and "plan mode" in r.content
     assert not call(reg, "list_dir", mode="plan").is_error
     assert call(reg, "finish", mode="plan", summary="x").is_error
-    assert call(reg, "submit_plan", mode="implement", design_decisions="x", file_tree=["a"]).is_error
+    assert call(reg, "submit_plan", mode="implement", plan="x", file_tree=["a"]).is_error
 
 
-def test_submit_plan_requires_ui_design_brief(reg):
+def test_submit_plan_needs_no_ui_brief_and_checks_deviations_only_when_switched_on(reg, ctx):
     call(reg, "update_todos", mode="plan", todos=[{"content": "a", "status": "in_progress"}])
-    no_brief = call(reg, "submit_plan", mode="plan", design_decisions="x" * 300, file_tree=["main.py"])
-    assert no_brief.is_error and "UI design brief" in no_brief.content
-    ok = call(reg, "submit_plan", mode="plan", design_decisions="## UI design brief\n" + "x" * 300,
-              file_tree=["main.py"])
-    assert not ok.is_error
+    assert call(reg, "submit_plan", mode="plan", plan="", file_tree=["main.py"]).is_error
+    assert not call(reg, "submit_plan", mode="plan", plan="short plan", file_tree=["main.py"]).is_error
+    ctx.record_deviations = True
+    refused = call(reg, "submit_plan", mode="plan", plan="short plan", file_tree=["main.py"])
+    assert refused.is_error and "deviation table" in refused.content
+    table = "## Deviations\n| a | b | c |"
+    assert not call(reg, "submit_plan", mode="plan", plan=table, file_tree=["main.py"]).is_error
 
 
 def test_invalid_json_unknown_tool_missing_args(reg):

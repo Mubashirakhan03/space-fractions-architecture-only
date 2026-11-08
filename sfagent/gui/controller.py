@@ -16,8 +16,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
+from sfagent import APP_NAME
 from sfagent.agent.loop import Agent
-from sfagent.agent.profile import load_profile
 from sfagent.agent.replay import ReplayProvider
 from sfagent.config import AppConfig
 from sfagent.llm.deepseek import DeepSeekProvider
@@ -46,7 +46,7 @@ APP_ROOT = Path(__file__).resolve().parent.parent.parent  # in a frozen exe this
 
 def user_data_dir() -> Path:
     """Persistent, user-visible folder for samples and profiles (never the temp _MEI folder)."""
-    return Path.home() / "Documents" / "SpaceFractionsAgent"
+    return Path.home() / "Documents" / APP_NAME
 
 
 def resource_dir(name: str) -> Path:
@@ -118,12 +118,11 @@ class RunController:
             try:
                 prov = provider or build_provider(cfg, replay_transcript)
                 spec = self._load_spec(cfg, replay_transcript)
-                profile = load_profile(cfg.profile_path)
                 self.agent = Agent(prov, cfg, cfg.output_dir, spec, on_event=self._emit,
                                    approve_write=approve if cfg.ask_before_write else None,
-                                   stop_event=self.stop_event, profile=profile)
-                self._emit("log", {"text": f"Provider: {prov.name} | model: {prov.model} | task profile: "
-                                           f"{profile.name if profile else 'none (spec only)'}"})
+                                   stop_event=self.stop_event)
+                self._emit("log", {"text": f"Provider: {prov.name} | model: {prov.model} | architecture only | "
+                                           f"record deviations: {'ON' if cfg.record_deviations else 'OFF'}"})
                 self.agent.run(resume=resume)
             except Exception as exc:  # surface everything to the UI instead of dying silently
                 self._emit("error", {"text": f"{type(exc).__name__}: {exc}"})

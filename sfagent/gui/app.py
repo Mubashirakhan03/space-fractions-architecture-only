@@ -21,7 +21,6 @@ from typing import Any
 import customtkinter as ctk
 
 from sfagent import APP_NAME, __version__
-from sfagent.agent.profile import load_profile
 from sfagent.agent.replay import REPLAY_LABEL
 from sfagent.config import AppConfig, load_config, mask_key, save_config
 from sfagent.gui import theme as T
@@ -32,7 +31,6 @@ from sfagent.gui.controller import (
     find_default_inputs,
     is_non_empty,
     launch_generated_game,
-    list_profiles,
     new_run_subfolder,
     read_run_state,
     run_succeeded,
@@ -41,13 +39,11 @@ from sfagent.llm.deepseek import DEEPSEEK_MODEL
 from sfagent.llm.pricing import PRICES_PER_M
 from sfagent.parsers.spec import build_spec
 
-TITLE = "Space Fractions Code Agent"
+TITLE = "Space Fractions Code Agent — architecture only"
 SUBTITLE = "A simplified Claude-Code-style agent powered by DeepSeek"
 PHASES = ["plan", "implement", "verify", "fix", "report"]
 PHASE_NAMES = {"plan": "1  Plan", "implement": "2  Implement", "verify": "3  Verify", "fix": "4  Fix",
                "report": "5  Report"}
-NO_PROFILE = "(none — derive everything from the spec)"
-BROWSE = "Browse…"
 POLL_MS = 100
 TODO_ICON = {"pending": "○", "in_progress": "◐", "completed": "●"}
 
@@ -74,7 +70,6 @@ class AgentApp(ctk.CTk):
         self.controller = RunController()
         self.vars: dict[str, tk.Variable] = {}
         self.phase_status: dict[str, str] = {}
-        self._profiles = {p.stem: p for p in list_profiles()}
         self._run_kind = "live"
         self._started_at = 0.0
         self._max = (AppConfig.max_requests, AppConfig.max_cost_usd)
@@ -207,13 +202,10 @@ class AgentApp(ctk.CTk):
                        self._pick_file)
         self._path_row(inputs, "Architecture views — PlantUML (.md)", "view_path", "Architecture_View.md",
                        self._pick_file)
-        self._label(inputs, "Task profile (optional hints)")
-        self._var("profile_path")
-        self.profile_menu = ctk.CTkOptionMenu(inputs, values=[NO_PROFILE, *self._profiles, BROWSE], height=34,
-                                              font=self.font(13), fg_color="#F9FAFB", text_color=T.TEXT,
-                                              button_color=T.ACCENT, button_hover_color=T.ACCENT_HOVER,
-                                              command=self._choose_profile)
-        self.profile_menu.pack(fill="x")
+        self._label(inputs, "Experiment (architecture only — no task profile, no extra requirements)")
+        ctk.CTkCheckBox(inputs, text="Ask the agent to record every deviation from the architecture (and why)",
+                        font=self.font(12), fg_color=T.ACCENT,
+                        variable=self._var("record_deviations", tk.BooleanVar, False)).pack(anchor="w")
         self._button(inputs, "Preview spec.json", self._preview_spec).pack(fill="x", pady=(10, 0))
 
         out = self._card(f, "Output")
@@ -308,10 +300,9 @@ class AgentApp(ctk.CTk):
                   "output_dir": c.output_dir or str(Path.home() / "Documents" / "SpaceFractionsGenerated"),
                   "max_steps": c.max_steps, "max_requests": c.max_requests, "max_cost_usd": c.max_cost_usd,
                   "fix_rounds": c.fix_rounds, "ask_before_write": c.ask_before_write,
-                  "profile_path": c.profile_path if c.profile_path and Path(c.profile_path).exists() else ""}
+                  "record_deviations": c.record_deviations}
         for k, v in values.items():
             self.vars[k].set(v)
-        self._show_profile()
         self._refresh_badge()
         self.vars["output_dir"].trace_add("write", lambda *_: self._refresh_run_button(self.controller.running))
         self._refresh_run_button()
@@ -324,7 +315,7 @@ class AgentApp(ctk.CTk):
                              max_requests=int(v["max_requests"]), max_cost_usd=float(v["max_cost_usd"]),
                              fix_rounds=int(v["fix_rounds"]), ask_before_write=v["ask_before_write"],
                              doc_path=v["doc_path"].strip(), view_path=v["view_path"].strip(),
-                             output_dir=v["output_dir"].strip(), profile_path=v["profile_path"])
+                             output_dir=v["output_dir"].strip(), record_deviations=v["record_deviations"])
         except ValueError as exc:
             raise ValueError("Run limits must be numbers (e.g. 1.00 for cost, 40 for requests).") from exc
 
@@ -356,24 +347,6 @@ class AgentApp(ctk.CTk):
         path = filedialog.askdirectory(title=f"Select {title}")
         if path:
             self.vars[var].set(path)
-
-    def _choose_profile(self, choice: str) -> None:
-        if choice == BROWSE:
-            path = filedialog.askopenfilename(title="Select a task profile", filetypes=[("Markdown", "*.md")])
-            if path:
-                self.vars["profile_path"].set(path)
-        elif choice == NO_PROFILE:
-            self.vars["profile_path"].set("")
-        else:
-            self.vars["profile_path"].set(str(self._profiles[choice]))
-        self._show_profile()
-
-    def _show_profile(self) -> None:
-        path = self.vars["profile_path"].get()
-        if path:
-            self._profiles.setdefault(Path(path).stem, Path(path))
-            self.profile_menu.configure(values=[NO_PROFILE, *self._profiles, BROWSE])
-        self.profile_menu.set(Path(path).stem if path else NO_PROFILE)
 
     def _test_connection(self) -> None:
         try:
@@ -413,8 +386,6 @@ class AgentApp(ctk.CTk):
     def _generate(self, resume: bool = False, replay: Path | None = None) -> None:
         try:
             cfg = self._form_config()
-            if cfg.profile_path:
-                load_profile(cfg.profile_path)  # validate before starting
         except ValueError as exc:
             messagebox.showerror(APP_NAME, str(exc))
             return

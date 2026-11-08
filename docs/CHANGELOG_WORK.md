@@ -351,3 +351,29 @@ Original inputs are also kept untouched in `D:\professor project\Task1\`.
   e-mail address, "interviews"); the technical instructions and the verbatim Task 1 instructions are kept.
 - Rollback: `git revert <this commit>` (the docx comes back with it). The files stay in older history and in v1.0.1.
 
+---
+
+# Architecture-only variant (separate local folder `space-fractions-architecture-only`, no GitHub remote)
+
+### 2026-11-09 — Variant created from v1.0.1 (commit 283156b)
+- Why: the user's research needs an agent that builds the application from the architecture alone, with no
+  requirements from the user or the developer (see `docs/EXPERIMENT.md`). The original repo and GitHub stay as they are.
+- Folder: `git clone` of the original into `D:\professor project\space-fractions-architecture-only`, `origin` removed
+  (nothing can be pushed by accident), own `.venv`, `.env` copied (gitignored), secret hook installed.
+- Prompt (`sfagent/agent/prompts.py`): only the task's conditions + agent working rules; removed UI_QUALITY, rule 3
+  (Tkinter-free domain), rule 10, UI design brief, TRACEABILITY / DESIGN_DECISIONS / UI-smoke deliverables, the
+  spec checklist and the task profile. `architecture_only()` strips `target_platform` (it said "SQLite file"),
+  `input_issues` and `platform_conflicts` from what the model sees and from `agent_run/spec.json`.
+- Switch `record_deviations` (config, GUI checkbox, CLI `--record-deviations`): adds rule 9 (deviation table in
+  DESIGN_DECISIONS.md). OFF: the plan is saved to `agent_run/plan.md` instead of the project.
+- Original input files are copied to `agent_run/inputs/` for the model to read.
+- Verify: deliverables (main.py, README.md, requirements.txt, tests) + compile + own tests + import check + new
+  **launch check** (`sfagent/agent/launch_check.py`: main.py runs 3 s; crash / Tk callback error / no window fails).
+  Removed: `ui_probe.py`, `spec_rules.py`, `profiles/space_fractions.md` and their tests.
+- App identity: `APP_NAME = SpaceFractionsArchOnly` (own %APPDATA% config and Documents folder), window title
+  "… — architecture only", exe `SpaceFractionsArchOnly.exe`.
+- Tests: new `tests/test_arch_only.py` (no requirement words in the system prompt for both switch states, harness
+  analysis never shown, profile ignored, switch behaviour, launch check); old generic/probe tests removed.
+  175 passed, 1 skipped. `docs/MODEL_INPUT.md` written by `scripts/dump_model_input.py`.
+- Rollback: delete the folder `space-fractions-architecture-only` (the original project is untouched).
+

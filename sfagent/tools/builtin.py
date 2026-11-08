@@ -37,6 +37,7 @@ class ToolContext:
     plan: dict[str, Any] | None = None
     finish_summary: str | None = None
     written: set[str] = field(default_factory=set)
+    record_deviations: bool = False  # experiment switch (see prompts.DEVIATION_RULE)
 
 
 # ---------- read-only ----------
@@ -251,14 +252,14 @@ def submit_plan(ctx: ToolContext, a: dict) -> str:
     tree = a["file_tree"]
     if not isinstance(tree, list) or not tree:
         raise ToolError("file_tree must be a non-empty list of relative file paths.")
-    if len(str(a["design_decisions"])) < 200:
-        raise ToolError("design_decisions is too short; include the adaptation mapping table and input issues.")
-    if "ui design brief" not in str(a["design_decisions"]).lower():
-        raise ToolError("design_decisions must include a 'UI design brief' section (target users, mood, palette, "
-                        "fonts, layout, key screens) derived from the spec.")
+    plan = str(a["plan"]).strip()
+    if not plan:
+        raise ToolError("plan must not be empty.")
+    if ctx.record_deviations and "deviation" not in plan.lower():
+        raise ToolError("plan is the content of DESIGN_DECISIONS.md and must contain the deviation table (rule 9).")
     if not ctx.todos.items:
         raise ToolError("Call update_todos with the implementation plan before submit_plan.")
-    ctx.plan = {"design_decisions": a["design_decisions"], "file_tree": tree, "notes": a.get("notes", "")}
+    ctx.plan = {"plan": plan, "file_tree": tree, "notes": a.get("notes", "")}
     return "Plan accepted. Implementation phase will start."
 
 
@@ -308,10 +309,10 @@ def build_registry(ctx: ToolContext) -> ToolRegistry:
                    "timeout": {"type": "integer"}}, ["action"]), run_python, modes=WORK_MODES),
         Tool("update_todos", "Replace the todo list (TodoWrite). Exactly one item in_progress while working.",
              _obj({"todos": {"type": "array", "items": todo_entry}}, ["todos"]), update_todos),
-        Tool("submit_plan", "PLAN phase only: submit DESIGN_DECISIONS.md content, the target file tree and "
-             "notes for AGENT_NOTES.md. Ends the plan phase.",
-             _obj({"design_decisions": S, "file_tree": {"type": "array", "items": S}, "notes": S},
-                  ["design_decisions", "file_tree"]), submit_plan, modes=frozenset({"plan"}), ends_phase=True),
+        Tool("submit_plan", "PLAN phase only: submit the plan, the target file tree and notes for AGENT_NOTES.md. "
+             "Ends the plan phase.",
+             _obj({"plan": S, "file_tree": {"type": "array", "items": S}, "notes": S},
+                  ["plan", "file_tree"]), submit_plan, modes=frozenset({"plan"}), ends_phase=True),
         Tool("finish", "Call when the current implement/fix phase is complete. The harness then compiles and "
              "runs the tests.", _obj({"summary": S}, ["summary"]), finish, modes=WORK_MODES, ends_phase=True),
     ]

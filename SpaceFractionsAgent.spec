@@ -37,7 +37,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name="SpaceFractionsAgent",
+    name="SpaceFractionsArchOnly",
     icon="assets/icon.ico",
     console=False,
     upx=False,

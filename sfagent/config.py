@@ -1,7 +1,7 @@
 """Application configuration.
 
 Key lookup order: GUI/config.json value → `DEEPSEEK_API_KEY` env var → `.env` (dev mode).
-Config lives in %APPDATA%\\SpaceFractionsAgent\\config.json — never in the repo, never logged.
+Config lives in %APPDATA%\\SpaceFractionsArchOnly\\config.json — never in the repo, never logged.
 """
 
 from __future__ import annotations
@@ -29,6 +29,7 @@ class AppConfig:
     max_output_tokens: int = 32768  # a write_files batch of several modules needs more than 8K
     fix_rounds: int = 3  # verify → fix cycles
     ask_before_write: bool = False
+    record_deviations: bool = False  # experiment switch: tell the model to record every deviation from the design
     doc_path: str = ""
     profile_path: str = ""  # optional task profile (profiles/*.md)
     view_path: str = ""

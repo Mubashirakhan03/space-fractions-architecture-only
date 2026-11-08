@@ -20,24 +20,21 @@ from sfagent.llm.mock import MockProvider, reply, tool_call
 from sfagent.llm.provider import LLMResponse, ToolCall, Usage
 from sfagent.parsers.spec import build_spec
 
-DESIGN = "# Design decisions\n\n## UI design brief\nCalm.\n\n| Original | Desktop | Reason |\n|---|---|---|\n" + \
-         "| PostgreSQL | SQLite | single user desktop |\n" * 8
+DESIGN = "# Design decisions\n\nPlan: logic in game/, a Tk window in main.py.\n"
 
 
 def project_files(failing: bool = False):
     assertion = "assert add(1, 1) == 3" if failing else "assert add(1, 1) == 2"
     return [
         {"path": "main.py",
-         "content": "from game.logic import add\n\nif __name__ == '__main__':\n    print(add(1, 2))\n"},
+         "content": "import tkinter as tk\n\nfrom game.logic import add\n\nif __name__ == '__main__':\n"
+                    "    root = tk.Tk()\n    tk.Label(root, text=str(add(1, 2))).pack()\n    root.mainloop()\n"},
         {"path": "game/__init__.py", "content": ""},
         {"path": "game/logic.py", "content": "def add(a, b):\n    return a + b\n"},
         {"path": "tests/test_logic.py",
          "content": f"from game.logic import add\n\n\ndef test_add():\n    {assertion}\n"},
-        {"path": "tests/test_ui_smoke.py",
-         "content": "def test_ui_stub():\n    minsize = (1100, 750)\n    assert minsize >= (1100, 750)\n"},
         {"path": "README.md", "content": "# Mini\n"},
         {"path": "requirements.txt", "content": "# standard library only\npytest\n"},
-        {"path": "TRACEABILITY.csv", "content": "requirement,feature,component,file,test\n"},
         {"path": "sql/schema.sql", "content": "CREATE TABLE scores (id INTEGER PRIMARY KEY);\n"},
         {"path": "data/questions.json", "content": "[]\n"},
     ]
@@ -47,7 +44,7 @@ def plan_turn():
     return reply(
         tool_call("update_todos", "t1", todos=[{"content": "write code", "status": "in_progress"},
                                                {"content": "write tests", "status": "pending"}]),
-        tool_call("submit_plan", "p1", design_decisions=DESIGN, file_tree=[f["path"] for f in project_files()],
+        tool_call("submit_plan", "p1", plan=DESIGN, file_tree=[f["path"] for f in project_files()],
                   notes="Logic in game/, tests headless."),
     )
 
@@ -77,7 +74,8 @@ def test_happy_path_end_to_end(tmp_path, spec):
 
     assert result.status == "completed" and result.verify_ok is True
     assert result.requests == 3
-    assert (out / "game/logic.py").exists() and (out / "DESIGN_DECISIONS.md").read_text().startswith("# Design")
+    assert (out / "game/logic.py").exists() and not (out / "DESIGN_DECISIONS.md").exists()
+    assert (out / "agent_run/plan.md").read_text().startswith("# Design")  # the plan stays out of the project
     assert "tests headless" in (out / "AGENT_NOTES.md").read_text()
     report = (out / "agent_run/RUN_REPORT.md").read_text(encoding="utf-8")
     assert "Verification | PASSED" in report and "Mock" in report

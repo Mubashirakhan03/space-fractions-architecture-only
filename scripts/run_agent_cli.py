@@ -19,7 +19,6 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from sfagent.agent.loop import Agent  # noqa: E402
-from sfagent.agent.profile import load_profile  # noqa: E402
 from sfagent.config import AppConfig  # noqa: E402
 from sfagent.gui.controller import build_provider  # noqa: E402
 from sfagent.parsers.spec import build_spec  # noqa: E402
@@ -30,7 +29,6 @@ def main() -> int:
     ap.add_argument("--out", required=True)
     ap.add_argument("--doc", default=str(ROOT / "samples" / "Architecture_Documentation.md"))
     ap.add_argument("--view", default=str(ROOT / "samples" / "Architecture_View.md"))
-    ap.add_argument("--profile", default="")
     ap.add_argument("--mock", action="store_true")
     ap.add_argument("--max-cost", type=float, default=1.0)
     ap.add_argument("--max-requests", type=int, default=40)
@@ -38,11 +36,13 @@ def main() -> int:
     ap.add_argument("--max-tokens", type=int, default=AppConfig.max_total_tokens)
     ap.add_argument("--max-steps", type=int, default=AppConfig.max_steps)
     ap.add_argument("--resume", action="store_true")
+    ap.add_argument("--record-deviations", action="store_true",
+                    help="experiment switch: tell the model to record every deviation from the architecture")
     a = ap.parse_args()
 
     cfg = AppConfig(provider="mock" if a.mock else "deepseek", max_cost_usd=a.max_cost, max_requests=a.max_requests,
                     fix_rounds=a.fix_rounds, max_total_tokens=a.max_tokens, max_steps=a.max_steps,
-                    doc_path=a.doc, view_path=a.view, output_dir=a.out, profile_path=a.profile)
+                    doc_path=a.doc, view_path=a.view, output_dir=a.out, record_deviations=a.record_deviations)
     provider = build_provider(cfg)
     spec = build_spec(Path(a.doc), Path(a.view))
     started = time.time()
@@ -65,9 +65,9 @@ def main() -> int:
             line = f"{kind}: {d.get('text') or d.get('phase') or ''}"
         print(t, line, flush=True)
 
-    print(f"provider={provider.name} model={provider.model} profile={a.profile or 'none'} out={a.out}", flush=True)
-    result = Agent(provider, cfg, a.out, spec, on_event=on_event, profile=load_profile(a.profile) or None).run(
-        resume=a.resume)
+    print(f"provider={provider.name} model={provider.model} variant=architecture-only "
+          f"record_deviations={'ON' if a.record_deviations else 'OFF'} out={a.out}", flush=True)
+    result = Agent(provider, cfg, a.out, spec, on_event=on_event).run(resume=a.resume)
     return 0 if result.status == "completed" and result.verify_ok else 1
 
 

@@ -297,3 +297,19 @@ verification mein generic tareeqe se theek kiya — aakhri run mein 5 poore roun
   PIN **4321** (Run 8 mein 1234 tha — README mein likha hai); sab jawab sahi, equivalent aur lowest-terms ab theek.
 - **Kamzoriyan:** "identify" sawal mein jawab sawal mein likha hota hai; compare mein faltu options; admin ka success
   message refresh se mit jata hai; menu mein Exit nahi.
+
+## Architecture-only variant (research ke liye, alag folder)
+
+- **Kyun:** asal project mein humne bahar se bahut si requirements daali thi (intro movie, PIN, admin list, 20 seed sawal,
+  bachon wala look…). Is se game behtar bana, lekin yeh sabit nahi hota ke AI **sirf naqshe** se kitna achha banata hai.
+- **Kya hataya:** UI aur app ke saare rules, task profile, spec se banne wali checklist, aur spec.json ka woh hissa jis
+  mein maine khud "SQLite" likha tha (yeh asal mein model ko data store bata deta tha — aap ki report ka PostgreSQL→SQLite
+  wala farq is wajah se bhi ho sakta tha).
+- **Kya rakha:** sirf professor ki shartein (desktop app, Python stdlib, code + requirements.txt + README + tests) aur agent
+  ke kaam karne ke tareeqe (tools, plan → likhna → verify → fix).
+- **Verify:** sirf "chalta hai ya nahi": compile, agent ke apne tests, imports, aur main.py 3 second chala kar dekhna ke
+  crash to nahi hota. Design/layout ke checks hata diye.
+- **Switch:** "deviation record karo" ON/OFF. ON par agent ko kaha jata hai ke naqshe se jahan hata, wahan DESIGN_DECISIONS.md
+  mein wajah likhe; OFF par kuch nahi kaha jata. Dono runs se aap ki report ke OP2 ka sawal check ho sakta hai.
+- **GitHub:** is folder ka koi remote nahi; push ho hi nahi sakta. Asal project aur GitHub waise hi hain.
+
