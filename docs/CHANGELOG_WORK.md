@@ -377,3 +377,5 @@ Original inputs are also kept untouched in `D:\professor project\Task1\`.
   175 passed, 1 skipped. `docs/MODEL_INPUT.md` written by `scripts/dump_model_input.py`.
 - Rollback: delete the folder `space-fractions-architecture-only` (the original project is untouched).
 
+- Exe: `profiles` removed from the PyInstaller spec and `list_profiles()` from the controller; built
+  `dist/SpaceFractionsArchOnly.exe` (26.5 MB), verify_exe 6/6 PASSED without Python.

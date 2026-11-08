@@ -75,11 +75,6 @@ def find_default_inputs(extra_dirs: list[Path] | None = None) -> tuple[str, str]
     return "", ""
 
 
-def list_profiles() -> list[Path]:
-    d = resource_dir("profiles")
-    return sorted(d.glob("*.md")) if d.is_dir() else []
-
-
 @dataclass
 class ApprovalRequest:
     path: str

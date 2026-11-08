@@ -19,7 +19,7 @@ hiddenimports = (
 datas = (
     collect_data_files("customtkinter")
     + collect_data_files("jsonschema_specifications")
-    + [("samples", "samples"), ("profiles", "profiles"), ("schemas/spec.schema.json", "schemas"), ("assets/icon.png", "assets"), ("assets/icon.ico", "assets")]
+    + [("samples", "samples"), ("schemas/spec.schema.json", "schemas"), ("assets/icon.png", "assets"), ("assets/icon.ico", "assets")]
 )
 
 a = Analysis(
