@@ -322,8 +322,21 @@ verification mein generic tareeqe se theek kiya — aakhri run mein 5 poore roun
 - **Bot kaisa hai:** game ke baare mein kuch nahi jaanta; jo button/field screen par hai wahi dabata hai, jaise
   ek naya user. Sab games (A ka bhi) bilkul ek hi bot se khele gaye, taake muqabla barabar ho.
 - **Sab se aham nateeja (OP2):** naqsha PostgreSQL, Node.js, Docker waghera kehta hai; teeno runs ne SQLite aur
-  desktop banaya, lekin README/AGENT_NOTES mein **ek bhi** deviation nahi likha (0/12). Agent A ne likha tha kyunke
+  desktop banaya, lekin README/AGENT_NOTES mein kisi technology ka naam le kar deviation nahi likha (0/12;
+  sirf b3 ne ek aam line likhi, neeche dekhein). Agent A ne likha tha kyunke
   us ke prompt mein likhna zaroori tha. Yani hidayat na ho to deviations chhup jaate hain.
 - **Jo checks ne nahi pakra:** b1 mein intro par click kaam nahi karta (sirf key), b2 mein Edit nahi hai aur radio
   buttons sab bhare dikhte hain, b3 mein login ka component hai magar istemaal nahi hota — Admin sab ke liye khula.
   Agent ke tests sirf apna code check karte hain, naqsha nahi.
+
+## Correction + structure comparison (2026-11-09) — asaan alfaaz mein
+
+- **Ghalti theek ki:** pehle likha tha ke kisi run ne koi deviation nahi likha. Asal mein b3 ki AGENT_NOTES mein ek
+  aam line hai: "Desktop Tkinter app (per harness rules), not the web/server stack…". Yani b3 ne web → desktop maana
+  aur wajah bhi di (harness ke rules), lekin kisi ek technology ka naam nahi liya (PostgreSQL → SQLite kahin nahi).
+- **SQLite:** standard library ke rule mein asal database sirf SQLite hi tha, is liye "teeno ne SQLite chuna" koi
+  khaas faisla nahi; asal baat yeh hai ke kisi ne nahi bataya ke PostgreSQL ki jagah liya.
+- **Structure (reflexion model):** naqshe mein Game beech mein hai aur Question, User, Admin teeno se juda hai.
+  Code ke imports dekhe: b1 mein Game kisi se nahi juda, UI sab ko jorta hai, aur ek naya link auth → repository;
+  b2 mein Question class game/ ke andar hai; b3 mein components aapas mein bilkul nahi jude, sab ui.py se guzarta
+  hai. Kisi run ne yeh farq apne docs mein nahi likha — balke README kehta hai "mirrors the architecture".

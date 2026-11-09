@@ -46,6 +46,45 @@ was on screen during the bot's play-through), checked by hand for the points bel
 - The agent's tests check the behaviour of its own code. **No test refers to the architecture** (no component,
   connector, data store or technology of the design is tested).
 
+## 2b. Structure: component links in the design vs. imports in the code (reflexion model)
+
+The ComponentDiagram (`Architecture_View.md` § 9) has four components and three links: **Game–Question,
+Game–User, Game–Admin** (Game is the hub). `scripts/evidence/conformance.py` extracts the imports between the
+modules of each package (tests and `main.py` excluded; imports inside functions included), maps each module to a
+component by its own docstring (e.g. a docstring starting "GameComponent: …"), else by its package's docstring, else by its
+name, and compares the result with the diagram. Full tables with module-level evidence:
+[`../evidence/CONFORMANCE.md`](../evidence/CONFORMANCE.md) § Structure.
+
+| | b1 | b2 | b3 | Agent A, run 9 |
+|---|---|---|---|---|
+| Module layout | layered: `service` = Game, `repository` = Question, `auth` = User, shared `models` | packages `game/` (contains `Question`), `persistence/` = Question, `user/`, `admin/` | flat `game_component`, `question_component`, `user_component` + `db`, `models`, `state_machine` | packages `game/`, `question/`, `user/`, `admin/`, `store/`, `ui/` |
+| Game–Question | absence (only `ui` uses both) | convergence (Question→Game) ² | absence (only `ui` uses both) | convergence (Game→Question) |
+| Game–User | absence ³ | convergence (User→Game, type hint only) | absence (only `ui` uses both) | convergence (User→Game) |
+| Game–Admin | absence (no Admin component) | convergence (Admin→Game) ² | absence (no Admin component) | absence (only `ui` uses both) |
+| Divergences (link in code, not in design) | User→Question (`auth` → `repository`) | Question→User (`persistence.repository` → `user.user`, inside a function) | none | Admin→Question, User→Question |
+| Components in code, not in design | `ui` (hub), `models` | `ui` (hub) | `ui` (hub: the only module that links components), `db`, `models`, `state_machine` | `ui` (hub), `store` |
+| Mapping rule | docstrings | docstrings | docstrings | package names (A's docstrings name no component) |
+
+² b2 put the `Question` class inside `game/` (Question merged into Game). Both "convergences" are imports of
+`game.question` (by `admin.admin` and by `persistence.repository`), so they come from where the class was put, not
+from a Game–Question or Game–Admin connector.
+³ In b1 the Game module imports neither Question nor User; `ui` uses `service` and `repository`, and `main.py`
+(outside the package) creates the `AuthService` and passes it to the UI — the composition root wires everything.
+
+- **b1:** layered instead of a Game hub. Game depends only on the shared models; the UI (with `main.py`) connects
+  the components; a new link `auth` → `repository` (User → Question) exists that the design does not have.
+- **b2:** closest to the diagram on paper, but because `Question` lives in `game/`, the links run *towards* Game
+  instead of from it; one undesigned link Question → User.
+- **b3:** the three components do not import each other at all; every link goes through `ui.py` (a hub the design
+  does not have). AdminComponent does not exist.
+- **Agent A, run 9** (for comparison): Game–Question and Game–User converge; Game–Admin is missing (only `ui` uses
+  both); two undesigned links to Question.
+- **Recorded?** Every run's README has a component → module table (b1, b2) or list (b3), and b2/b3 say the code
+  "mirrors" the architecture. No run records that the links differ from the component diagram, or that a UI hub
+  was added.
+- Limits: imports are a proxy for connectors (a call through an injected object, as in b1's UI → `auth`, is not an
+  import); the mapping uses the agent's own docstrings, i.e. its own claims about which module is which component.
+
 ## 3. Technology deviations: visible or hidden?
 
 The architecture describes a web/cloud microservice system: Node.js, Express.js, RESTful API, PostgreSQL, Redis,
@@ -55,29 +94,42 @@ Python standard library cannot use them, so every one is a deviation.
 | | b1 | b2 | b3 | Agent A, run 9 (for comparison) |
 |---|---|---|---|---|
 | Tech-stack choices used | 0 / 12 | 0 / 12 | 0 / 12 | 0 / 12 |
-| … mentioned in the delivered documents (README, AGENT_NOTES) | **0 / 12** | **0 / 12** | **0 / 12** | 12 / 12 (deviation table in `DESIGN_DECISIONS.md`, with reasons) |
+| … named in the delivered documents (README, AGENT_NOTES) | **0 / 12** | **0 / 12** | **0 / 12** ¹ | 12 / 12 (deviation table in `DESIGN_DECISIONS.md`, with reasons) |
 | Data store | SQLite | SQLite | SQLite | SQLite |
 | "PostgreSQL → SQLite" stated anywhere a reader would see it | no | no | no | yes (required by A's prompt) |
-| "web / microservices → desktop" stated | no | no | no | yes |
+| "web / microservices → desktop" stated | no | no | yes (one general line in AGENT_NOTES) | yes |
+
+¹ b3 names no single technology, but `examples/arch_only_b3/AGENT_NOTES.md` line 6 says: "Desktop Tkinter app (per
+harness rules), not the web/server stack listed in the spec's tech_stack." This is one general acknowledgement of
+the web → desktop deviation, with a reason (the harness rules).
 
 - All three runs chose **SQLite** on their own (the model no longer receives the old harness hint "persistence:
-  SQLite file"). None of them says that the architecture asks for PostgreSQL. b1's plan even calls its SQLite table
+  SQLite file"). None of them says that the architecture asks for PostgreSQL (PostgreSQL → SQLite is stated in no
+  run).
+- Note: this choice was **constrained**. The standard-library rule (a fixed condition of the professor's task) left
+  SQLite (`sqlite3`) as the only real database available, so "all three chose SQLite" says little about the agent's
+  judgement; the finding is that none of them *said* it replaced PostgreSQL. b1's plan even calls its SQLite table
   a direct mirror of the architecture's `JSONB` table (`examples/arch_only_b1/agent_run/plan.md`).
 - The only place where b2 admits a change is its internal plan ("introductory movie substitute — animated welcome
   frame"), which is not part of the delivered project.
 - Agent A recorded its deviations because its prompt *required* a `DESIGN_DECISIONS.md` with a deviation table; when
-  that requirement is removed (Agent B), the agent records **none** — the deviations are hidden from a reader of the
-  code and its documents.
+  that requirement is removed (Agent B), no run explained a deviation per technology; one run (b3) wrote one general
+  line attributing the desktop choice to the harness rules. The individual deviations stay hidden from a reader of
+  the code and its documents.
 
 ## 4. What this suggests for OP2 (pilot evidence, n = 3)
 
 1. From the architecture alone the agent built a working desktop game in every run: the functional elements
    (use cases, states, domain classes, main features) are there and the app runs without errors.
-2. The architectural decisions (technology stack, data store, distribution) were dropped **silently** in 3 of 3
-   runs. Without an explicit instruction, the agent did not explain any deviation.
-3. The agent's tests and the harness's "does it run" check say nothing about conformance: all runs passed, while
+2. The architectural decisions (technology stack, data store, distribution) were dropped in 3 of 3 runs. Without
+   an explicit instruction, no run explained a deviation per technology; one run (b3) wrote one general line
+   attributing the desktop choice to the harness rules.
+3. The *structure* of the design (component links) was not kept either, and in different ways in each run (§ 2b),
+   while every run's README claims a component mapping or says it "mirrors" the architecture. No run recorded these
+   structural differences.
+4. The agent's tests and the harness's "does it run" check say nothing about conformance: all runs passed, while
    real gaps (unused UserComponent → unprotected admin, missing Edit, a dead click) stayed undetected.
-4. Element names in the code are weak evidence of conformance (b3's `UserComponent` exists but is not wired in).
+5. Element names in the code are weak evidence of conformance (b3's `UserComponent` exists but is not wired in).
 
 ## 5. Limitations
 

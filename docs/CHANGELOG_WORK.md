@@ -402,3 +402,16 @@ Original inputs are also kept untouched in `D:\professor project\Task1\`.
 - Projects copied to `examples/arch_only_b1..b3`; evidence in `evidence/` (+ Agent A run 9 played by the same bot in
   `evidence/a_run9`); results in `docs/STUDY_RESULTS.md`, table in `evidence/CONFORMANCE.md`.
 - Rollback: `git revert` this commit (the agent code is not touched; `runs/` stays local and ignored).
+
+### 2026-11-09 — Study docs corrected + structural (reflexion) comparison (agent unchanged)
+- User request: fix a wrong claim and add a structure comparison; only `docs/` and `scripts/evidence/` may change.
+- `docs/STUDY_RESULTS.md`: b3 *did* write one general line (`examples/arch_only_b3/AGENT_NOTES.md` line 6: "Desktop
+  Tkinter app (per harness rules), not the web/server stack …"). § 3 table row "web → desktop stated" for b3 = yes
+  (one general line); § 3 last bullet and § 4 point 2 reworded ("no run explained a deviation per technology; one
+  run (b3) wrote one general line …"); note that the stdlib rule left SQLite as the only real database.
+- New § 2b: component links of the ComponentDiagram (Game–Question, Game–User, Game–Admin) vs. imports in the code,
+  per run (convergences, divergences, absences, code-only nodes such as the `ui` hub), Agent A run 9 for comparison.
+- `scripts/evidence/conformance.py`: new structure section (ast-based import extraction; module → component by its
+  own docstring, then package docstring, then name). `evidence/CONFORMANCE.md` regenerated (older sections
+  byte-identical, new section appended). `docs/LEARNING_NOTES_UR.md` corrected.
+- Rollback: `git revert` this commit.

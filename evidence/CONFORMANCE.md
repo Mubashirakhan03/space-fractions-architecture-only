@@ -51,3 +51,133 @@ A desktop / standard-library implementation cannot use most of these, so each on
 - **b2**: “standard library (tkinter gui, sqlite persistence).” / “- **admin panel** — add and delete questions (persisted to sqlite).” / “in a local sqlite database.”
 - **b3**: “- persistent question bank and game records via sqlite (asr-1 data durability).” / “- `spacefractions/db.py` — sqlite schema & connection helper.” / “- sqlite (stdlib sqlite3) provides persistence for asr-1 data durability; json for trivial data, json columns for game_state.”
 - **a_run9**: “tests cover domain logic, the game state machine, question generation (with independent recomputation of expected values), sqlite persistenc” / “- `store/` — sqlite persistence (asr-1 data durability)” / “see `sql/schema.sql` for the sqlite ddl and `traceability.csv` for the requirement/use-case mapping.”
+
+## Structure: component links in the design vs. import links in the code
+
+Reflexion-model comparison. **Design:** the ComponentDiagram of `Architecture_View.md` (undirected links). **Code:** module-level imports inside the package (`spacefractions/` for Agent B, the top-level packages for Agent A run 9; tests and the `main.py` / `__main__.py` entry points excluded; imports inside functions included). Each module is mapped to a component by the first line of its own docstring, else by its package's docstring, else by its module/package name; anything else is a code-only node (e.g. `ui`, `models`, `db`). **Convergence** = design link with an import in either direction; **divergence** = import between two design components without a design link; **absence** = design link without any import. Imports to or from code-only nodes are listed separately.
+
+| | b1 | b2 | b3 | a_run9 |
+|---|---|---|---|---|
+| design link Game–Admin | **absence** | convergence (Admin→Game) | **absence** | **absence** (both used by `ui`) |
+| design link Game–Question | **absence** (both used by `ui`) | convergence (Question→Game) | **absence** (both used by `ui`) | convergence (Game→Question) |
+| design link Game–User | **absence** | convergence (User→Game) | **absence** (both used by `ui`) | convergence (User→Game) |
+| divergences (code link, no design link) | User→Question | Question→User | – | Admin→Question, User→Question |
+| design components without code | Admin | – | Admin | – |
+| code-only nodes | models, ui | ui | db, models, state_machine, ui | store, ui |
+
+### b1
+
+| Module | Mapped to | Rule |
+|---|---|---|
+| `auth` | UserComponent | own docstring |
+| `models` | models | not a design component |
+| `repository` | QuestionComponent | own docstring |
+| `service` | GameComponent | own docstring |
+| `ui` | ui | not a design component |
+
+| Import link (node → node) | Evidence (module → module) |
+|---|---|
+| Game → models (code-only node) | `service` → `models` |
+| Question → models (code-only node) | `repository` → `models` |
+| User → Question (divergence) | `auth` → `repository` |
+| User → models (code-only node) | `auth` → `models` |
+| ui → Game (code-only node) | `ui` → `service` |
+| ui → Question (code-only node) | `ui` → `repository` |
+| ui → models (code-only node) | `ui` → `models` |
+
+### b2
+
+| Module | Mapped to | Rule |
+|---|---|---|
+| `admin` | AdminComponent | own docstring |
+| `admin.admin` | AdminComponent | docstring of package `admin` |
+| `game` | GameComponent | own docstring |
+| `game.fractions` | GameComponent | docstring of package `game` |
+| `game.game` | GameComponent | docstring of package `game` |
+| `game.question` | GameComponent | docstring of package `game` |
+| `game.state` | GameComponent | docstring of package `game` |
+| `persistence` | QuestionComponent | own docstring |
+| `persistence.repository` | QuestionComponent | own docstring |
+| `ui` | ui | not a design component |
+| `ui.app` | ui | not a design component |
+| `user` | UserComponent | own docstring |
+| `user.user` | UserComponent | docstring of package `user` |
+
+| Import link (node → node) | Evidence (module → module) |
+|---|---|
+| Admin → Game (convergence) | `admin.admin` → `game.question` |
+| Question → Game (convergence) | `persistence.repository` → `game.fractions`; `persistence.repository` → `game.question`; `persistence.repository` → `game.state` |
+| Question → User (divergence) | `persistence.repository` → `user.user` |
+| User → Game (convergence) | `user.user` → `game.game` (type hint only) |
+| ui → Game (code-only node) | `ui.app` → `game.fractions`; `ui.app` → `game.game`; `ui.app` → `game.question`; `ui.app` → `game.state` |
+| ui → Question (code-only node) | `ui.app` → `persistence.repository` |
+
+### b3
+
+| Module | Mapped to | Rule |
+|---|---|---|
+| `db` | db | not a design component |
+| `game_component` | GameComponent | own docstring |
+| `models` | models | not a design component |
+| `question_component` | QuestionComponent | own docstring |
+| `state_machine` | state_machine | not a design component |
+| `ui` | ui | not a design component |
+| `user_component` | UserComponent | own docstring |
+
+| Import link (node → node) | Evidence (module → module) |
+|---|---|
+| Game → db (code-only node) | `game_component` → `db` |
+| Game → models (code-only node) | `game_component` → `models` |
+| Game → state_machine (code-only node) | `game_component` → `state_machine` |
+| Question → db (code-only node) | `question_component` → `db` |
+| Question → models (code-only node) | `question_component` → `models` |
+| User → db (code-only node) | `user_component` → `db` |
+| User → models (code-only node) | `user_component` → `models` |
+| ui → Game (code-only node) | `ui` → `game_component` |
+| ui → Question (code-only node) | `ui` → `question_component` |
+| ui → User (code-only node) | `ui` → `user_component` |
+| ui → models (code-only node) | `ui` → `models` |
+
+### a_run9
+
+| Module | Mapped to | Rule |
+|---|---|---|
+| `admin` | AdminComponent | module/package name |
+| `admin.admin` | AdminComponent | module/package name |
+| `admin.settings` | AdminComponent | module/package name |
+| `game` | GameComponent | module/package name |
+| `game.game` | GameComponent | module/package name |
+| `game.question_generator` | GameComponent | module/package name |
+| `game.state_machine` | GameComponent | module/package name |
+| `question` | QuestionComponent | module/package name |
+| `question.question` | QuestionComponent | module/package name |
+| `store` | store | not a design component |
+| `store.store` | store | not a design component |
+| `ui` | ui | not a design component |
+| `ui.app` | ui | not a design component |
+| `ui.screens` | ui | not a design component |
+| `ui.screens.admin_screen` | ui | not a design component |
+| `ui.screens.base` | ui | not a design component |
+| `ui.screens.ending_scene` | ui | not a design component |
+| `ui.screens.help_screen` | ui | not a design component |
+| `ui.screens.intro_movie` | ui | not a design component |
+| `ui.screens.main_menu` | ui | not a design component |
+| `ui.screens.pin_screen` | ui | not a design component |
+| `ui.screens.question_screen` | ui | not a design component |
+| `ui.screens.score_screen` | ui | not a design component |
+| `ui.theme` | ui | not a design component |
+| `user` | UserComponent | module/package name |
+| `user.user` | UserComponent | module/package name |
+
+| Import link (node → node) | Evidence (module → module) |
+|---|---|
+| Admin → Question (divergence) | `admin.admin` → `question.question` |
+| Admin → store (code-only node) | `admin.admin` → `store.store` |
+| Game → Question (convergence) | `game.game` → `question.question`; `game.question_generator` → `question.question` |
+| User → Game (convergence) | `user.user` → `game.game` |
+| User → Question (divergence) | `user.user` → `question.question` |
+| store → Question (code-only node) | `store.store` → `question.question` |
+| ui → Admin (code-only node) | `ui.app` → `admin.admin`; `ui.app` → `admin.settings` |
+| ui → Game (code-only node) | `ui.app` → `game.game`; `ui.screens.question_screen` → `game.state_machine` |
+| ui → Question (code-only node) | `ui.screens.admin_screen` → `question.question` |
+| ui → store (code-only node) | `ui.app` → `store.store` |
