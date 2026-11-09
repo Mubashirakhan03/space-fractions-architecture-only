@@ -62,6 +62,29 @@ GUI: checkbox *"Ask the agent to record every deviation from the architecture (a
 .venv\Scripts\python scripts\run_agent_cli.py --out runs\arch_on --max-cost 1.0 --max-requests 80 --record-deviations
 ```
 
+## Study protocol (Agent B) — fixed before the first run
+
+1. **Minimal, saved prompt.** "No requirements at all" is impossible — every agent has a system prompt. Agent B's
+   prompt says only: here is the architecture, build the application from it, write tests — plus the agent's
+   working rules, which are the same mechanics Agent A has. The exact text is saved in
+   [`MODEL_INPUT.md`](MODEL_INPUT.md), and each run's `agent_run/transcript.jsonl` holds what was really sent.
+2. **Desktop is the only task condition** (the professor's), given as one line. So A and B differ only in the
+   rules the user and the developer added to A.
+3. **No "give reasons" instruction.** The study observes whether the agent explains its deviations *on its own*.
+   All study runs use the switch **OFF**. The ON mode stays in the code for a possible later comparison but is
+   not part of this study.
+4. **Frozen before the first run.** The agent is frozen at the commit tagged `agent-b-frozen`. No change to the
+   prompt or the agent between or after runs because of what a run produced, and no hand edits to generated code.
+   (In Task 1 the agent was improved after every run — that is how the user's requirements got in.)
+5. **Everything else the same as A:** model `deepseek-v4-pro`, the same two input files, the same tools (read,
+   write and edit files, compile, run tests, todos, plan, finish).
+6. **2–3 runs** if the budget allows, because the output differs from run to run; each into a new empty folder
+   (`runs/b1`, `runs/b2`, `runs/b3`), $1 limit, off-peak. With one run only, the report calls it a *pilot (one run)*.
+
+```bat
+.venv\Scripts\python scripts\run_agent_cli.py --out runs\b1 --max-cost 1.0 --max-requests 80
+```
+
 ## What can be compared afterwards
 
 - Which architecture elements were implemented, changed or left out (components, use cases, states, sequences,

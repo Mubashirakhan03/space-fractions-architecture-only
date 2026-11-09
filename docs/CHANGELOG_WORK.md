@@ -385,3 +385,7 @@ Original inputs are also kept untouched in `D:\professor project\Task1\`.
 - Created https://github.com/Mubashirakhan03/space-fractions-architecture-only (public), `origin` set to it, `main` pushed (all code, docs, logs and example transcripts). No release yet; the push to `main` runs the CI build, whose exe is downloadable as an Actions artifact.
 - The original repository https://github.com/Mubashirakhan03/space-fractions-code-agent is not changed.
 - Rollback: `gh repo delete Mubashirakhan03/space-fractions-architecture-only` (and `git remote remove origin`).
+
+### 2026-11-09 - Study protocol and freeze (user's 5 points)
+- docs/EXPERIMENT.md: section 'Study protocol (Agent B)': minimal saved prompt, desktop as the only condition, no 'give reasons' instruction (study runs use the switch OFF), agent frozen at tag `agent-b-frozen` before the first run, same model/inputs/tools as A, 2-3 runs (one run = pilot).
+- No code change. Rollback: `git revert` this commit and `git tag -d agent-b-frozen`.
