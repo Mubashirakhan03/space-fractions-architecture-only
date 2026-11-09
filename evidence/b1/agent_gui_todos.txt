@@ -1,0 +1,6 @@
+●  Study architecture and plan implementation
+●  Implement domain models (Game, Question, User, Admin)
+●  Implement persistence layer (SQLite) for questions/games
+●  Implement Tkinter UI (menu, movie, questions, ending scene)
+●  Write tests and verify (compile + test)
+●  Write README, requirements.txt, AGENT_NOTES.md

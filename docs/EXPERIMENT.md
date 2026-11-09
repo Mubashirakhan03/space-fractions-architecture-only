@@ -85,6 +85,12 @@ GUI: checkbox *"Ask the agent to record every deviation from the architecture (a
 .venv\Scripts\python scripts\run_agent_cli.py --out runs\b1 --max-cost 1.0 --max-requests 80
 ```
 
+**As run (2026-11-09):** b1, b2, b3 through the agent's own GUI, recorded with
+`scripts/evidence/record_agent_run.py --out runs\bN --evidence evidence\bN --max-cost 0.22 --max-requests 80`
+(limit $0.22 instead of $1.00 because the account had $0.77; the highest run cost was $0.047, so the limit was
+never close). Each game was then played and recorded with `scripts/evidence/play_game.py`. Results:
+[`STUDY_RESULTS.md`](STUDY_RESULTS.md); evidence: [`../evidence/`](../evidence/README.md).
+
 ## What can be compared afterwards
 
 - Which architecture elements were implemented, changed or left out (components, use cases, states, sequences,

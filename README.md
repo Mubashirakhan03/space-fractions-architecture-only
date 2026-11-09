@@ -6,6 +6,8 @@
 > in the original project (animated intro, admin PIN, admin list, seed data, UI style rules, task profile, the
 > harness's own platform analysis) are removed, and verification only checks that the program runs.
 > One switch decides whether the agent is told to record its deviations from the architecture.
+> **Results of the three study runs: [`docs/STUDY_RESULTS.md`](docs/STUDY_RESULTS.md)** (evidence: videos,
+> screenshots and logs in [`evidence/`](evidence/README.md)).
 > Design and details: [`docs/EXPERIMENT.md`](docs/EXPERIMENT.md) · exact model input:
 > [`docs/MODEL_INPUT.md`](docs/MODEL_INPUT.md). Exe: `SpaceFractionsArchOnly.exe` on the Releases page.
 >

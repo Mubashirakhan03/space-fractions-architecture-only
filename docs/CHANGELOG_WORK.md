@@ -389,3 +389,16 @@ Original inputs are also kept untouched in `D:\professor project\Task1\`.
 ### 2026-11-09 - Study protocol and freeze (user's 5 points)
 - docs/EXPERIMENT.md: section 'Study protocol (Agent B)': minimal saved prompt, desktop as the only condition, no 'give reasons' instruction (study runs use the switch OFF), agent frozen at tag `agent-b-frozen` before the first run, same model/inputs/tools as A, 2-3 runs (one run = pilot).
 - No code change. Rollback: `git revert` this commit and `git tag -d agent-b-frozen`.
+
+### 2026-11-09 — Study runs b1–b3 with full evidence (agent unchanged, frozen at `agent-b-frozen`)
+- User request: run with her DeepSeek key (already in `.env`, unchanged — never written anywhere else), keep
+  screenshots, videos of the runs and of the game being played, and all logs; balance $0.77, keep some left.
+- New evidence tools in `scripts/evidence/` (not part of the agent): `winrec.py` (PrintWindow + ffmpeg recorder),
+  `record_agent_run.py` (drives the agent GUI, records video/screenshots/events), `play_game.py` (generic play bot
+  on a copy of the project, video + subtitles + per-step screenshots + log), `conformance.py`, `balance.py`.
+  ffmpeg installed with `winget install Gyan.FFmpeg.Essentials`.
+- Runs (switch OFF, $0.22 / 80 requests limit, off-peak 12:08–13:00 UTC): b1 $0.047, b2 $0.043, b3 $0.045; all
+  verify PASSED with 0 fix rounds. Balance $0.77 → $0.63.
+- Projects copied to `examples/arch_only_b1..b3`; evidence in `evidence/` (+ Agent A run 9 played by the same bot in
+  `evidence/a_run9`); results in `docs/STUDY_RESULTS.md`, table in `evidence/CONFORMANCE.md`.
+- Rollback: `git revert` this commit (the agent code is not touched; `runs/` stays local and ignored).

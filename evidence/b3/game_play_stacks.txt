@@ -1,0 +1,73 @@
+Timeout (0:00:40)!
+Thread 0x00000c1c (most recent call first):
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\winrec.py", line 129 in _run
+  File "C:\Python312\Lib\threading.py", line 1012 in run
+  File "C:\Python312\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Python312\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x0000b2f0 (most recent call first):
+  File "C:\Python312\Lib\tkinter\__init__.py", line 1505 in mainloop
+  File "C:\Users\Eocean\AppData\Local\Temp\sf_play_sn_ulgbk\app\spacefractions\ui.py", line 70 in start
+  File "C:\Users\Eocean\AppData\Local\Temp\sf_play_sn_ulgbk\app\main.py", line 11 in main
+  File "C:\Users\Eocean\AppData\Local\Temp\sf_play_sn_ulgbk\app\main.py", line 15 in <module>
+  File "<frozen runpy>", line 88 in _run_code
+  File "<frozen runpy>", line 98 in _run_module_code
+  File "<frozen runpy>", line 287 in run_path
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 421 in child
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 479 in main
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 502 in <module>
+Timeout (0:00:40)!
+Thread 0x00000c1c (most recent call first):
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\winrec.py", line 129 in _run
+  File "C:\Python312\Lib\threading.py", line 1012 in run
+  File "C:\Python312\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Python312\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x0000b2f0 (most recent call first):
+  File "C:\Python312\Lib\tkinter\__init__.py", line 1505 in mainloop
+  File "C:\Users\Eocean\AppData\Local\Temp\sf_play_sn_ulgbk\app\spacefractions\ui.py", line 70 in start
+  File "C:\Users\Eocean\AppData\Local\Temp\sf_play_sn_ulgbk\app\main.py", line 11 in main
+  File "C:\Users\Eocean\AppData\Local\Temp\sf_play_sn_ulgbk\app\main.py", line 15 in <module>
+  File "<frozen runpy>", line 88 in _run_code
+  File "<frozen runpy>", line 98 in _run_module_code
+  File "<frozen runpy>", line 287 in run_path
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 421 in child
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 479 in main
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 502 in <module>
+Timeout (0:00:40)!
+Thread 0x00000c1c (most recent call first):
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\winrec.py", line 57 in capture
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\winrec.py", line 125 in _run
+  File "C:\Python312\Lib\threading.py", line 1012 in run
+  File "C:\Python312\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Python312\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x0000b2f0 (most recent call first):
+  File "C:\Python312\Lib\tkinter\__init__.py", line 1505 in mainloop
+  File "C:\Users\Eocean\AppData\Local\Temp\sf_play_sn_ulgbk\app\spacefractions\ui.py", line 70 in start
+  File "C:\Users\Eocean\AppData\Local\Temp\sf_play_sn_ulgbk\app\main.py", line 11 in main
+  File "C:\Users\Eocean\AppData\Local\Temp\sf_play_sn_ulgbk\app\main.py", line 15 in <module>
+  File "<frozen runpy>", line 88 in _run_code
+  File "<frozen runpy>", line 98 in _run_module_code
+  File "<frozen runpy>", line 287 in run_path
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 421 in child
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 479 in main
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 502 in <module>
+Timeout (0:00:40)!
+Thread 0x00000c1c (most recent call first):
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\winrec.py", line 129 in _run
+  File "C:\Python312\Lib\threading.py", line 1012 in run
+  File "C:\Python312\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Python312\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x0000b2f0 (most recent call first):
+  File "C:\Python312\Lib\tkinter\__init__.py", line 1505 in mainloop
+  File "C:\Users\Eocean\AppData\Local\Temp\sf_play_sn_ulgbk\app\spacefractions\ui.py", line 70 in start
+  File "C:\Users\Eocean\AppData\Local\Temp\sf_play_sn_ulgbk\app\main.py", line 11 in main
+  File "C:\Users\Eocean\AppData\Local\Temp\sf_play_sn_ulgbk\app\main.py", line 15 in <module>
+  File "<frozen runpy>", line 88 in _run_code
+  File "<frozen runpy>", line 98 in _run_module_code
+  File "<frozen runpy>", line 287 in run_path
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 421 in child
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 479 in main
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 502 in <module>

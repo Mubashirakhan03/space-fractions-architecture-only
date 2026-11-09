@@ -1,0 +1,256 @@
+{"t": 3.1, "step": 0, "kind": "start", "text": "window 'Space Fractions' opened"}
+{"t": 4.6, "step": 1, "kind": "screen", "texts": ["SPACE FRACTIONS", "An adventure among the numbers", "— press any key or click to continue —"], "buttons": [], "entries": 0, "radios": []}
+{"t": 4.74, "step": 1, "kind": "action", "summary": "step 1: pressed Space (the screen listens for keys)"}
+{"t": 6.56, "step": 2, "kind": "screen", "texts": ["Space Fractions", "Play Game", "View Score", "View Help", "Admin (Update Questions)", "Admin Login", "Quit"], "buttons": ["Play Game", "View Score", "View Help", "Admin (Update Questions)", "Admin Login", "Quit"], "entries": 0, "radios": []}
+{"t": 6.72, "step": 2, "kind": "action", "summary": "step 2: clicked 'Play Game'", "answers_seen": []}
+{"t": 8.55, "step": 3, "kind": "screen", "texts": ["Question 1 of 6   |   Score: 0", "What fraction equals 0.5 ?", "1/2", "1/3", "1/4", "2/5", "Pause", "Quit to Menu"], "buttons": ["1/2", "1/3", "1/4", "2/5", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 8.7, "step": 3, "kind": "action", "summary": "step 3: clicked '1/2'", "answers_seen": []}
+{"t": 10.5, "step": 4, "kind": "screen", "texts": ["Question 2 of 6   |   Score: 1", "What is 3/4 - 1/4 ?", "1/2", "2/4", "1", "1/4", "Pause", "Quit to Menu"], "buttons": ["1/2", "2/4", "1", "1/4", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 10.63, "step": 4, "kind": "action", "summary": "step 4: clicked '1/2'", "answers_seen": ["1/2"]}
+{"t": 12.63, "step": 5, "kind": "screen", "texts": ["Question 3 of 6   |   Score: 2", "What is 2/3 - 1/6 ?", "1/2", "1/3", "1/6", "3/6", "Pause", "Quit to Menu"], "buttons": ["1/2", "1/3", "1/6", "3/6", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 12.77, "step": 5, "kind": "action", "summary": "step 5: clicked '1/2'", "answers_seen": ["1/2"]}
+{"t": 14.57, "step": 6, "kind": "screen", "texts": ["Question 4 of 6   |   Score: 3", "What is 3/4 + 1/2 ?", "5/4", "1", "4/6", "3/8", "Pause", "Quit to Menu"], "buttons": ["5/4", "1", "4/6", "3/8", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 14.72, "step": 6, "kind": "action", "summary": "step 6: clicked '5/4'", "answers_seen": ["5/4"]}
+{"t": 16.64, "step": 7, "kind": "screen", "texts": ["Question 5 of 6   |   Score: 4", "What is 1/3 + 1/3 ?", "2/3", "1/6", "2/6", "1/3", "Pause", "Quit to Menu"], "buttons": ["2/3", "1/6", "2/6", "1/3", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 16.77, "step": 7, "kind": "action", "summary": "step 7: clicked '2/3'", "answers_seen": ["2/3"]}
+{"t": 18.59, "step": 8, "kind": "screen", "texts": ["Question 6 of 6   |   Score: 5", "What is 2/3 * 3/4 ?", "1/2", "6/7", "5/12", "2/4", "Pause", "Quit to Menu"], "buttons": ["1/2", "6/7", "5/12", "2/4", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 18.71, "step": 8, "kind": "action", "summary": "step 8: clicked '1/2'", "answers_seen": ["1/2"]}
+{"t": 20.53, "step": 9, "kind": "screen", "texts": ["Mission Report", "Score: 6 / 6 (100%)", "Perfect! You mastered the fractions! 🚀", "Play Again", "Main Menu"], "buttons": ["Play Again", "Main Menu"], "entries": 0, "radios": []}
+{"t": 20.66, "step": 9, "kind": "action", "summary": "step 9: clicked 'Play Again'", "answers_seen": []}
+{"t": 22.54, "step": 10, "kind": "screen", "texts": ["Question 1 of 6   |   Score: 0", "What is 1/5 + 2/5 ?", "3/5", "3/10", "2/5", "1", "Pause", "Quit to Menu"], "buttons": ["3/5", "3/10", "2/5", "1", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 22.66, "step": 10, "kind": "action", "summary": "step 10: clicked '3/5'", "answers_seen": ["3/5"]}
+{"t": 24.47, "step": 11, "kind": "screen", "texts": ["Question 2 of 6   |   Score: 1", "What fraction equals 0.5 ?", "1/2", "1/3", "1/4", "2/5", "Pause", "Quit to Menu"], "buttons": ["1/2", "1/3", "1/4", "2/5", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 24.63, "step": 11, "kind": "action", "summary": "step 11: clicked '1/3'", "answers_seen": []}
+{"t": 26.44, "step": 12, "kind": "screen", "texts": ["Question 3 of 6   |   Score: 1", "What is 1/2 * 1/2 ?", "1/4", "1", "1/2", "2/4", "Pause", "Quit to Menu"], "buttons": ["1/4", "1", "1/2", "2/4", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 26.57, "step": 12, "kind": "action", "summary": "step 12: clicked '1/4'", "answers_seen": ["1/4"]}
+{"t": 28.38, "step": 13, "kind": "screen", "texts": ["Question 4 of 6   |   Score: 2", "What is 3/4 - 1/4 ?", "1/2", "2/4", "1", "1/4", "Pause", "Quit to Menu"], "buttons": ["1/2", "2/4", "1", "1/4", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 28.52, "step": 13, "kind": "action", "summary": "step 13: clicked '1/2'", "answers_seen": ["1/2"]}
+{"t": 30.32, "step": 14, "kind": "screen", "texts": ["Question 5 of 6   |   Score: 3", "What is 3/4 + 1/2 ?", "5/4", "1", "4/6", "3/8", "Pause", "Quit to Menu"], "buttons": ["5/4", "1", "4/6", "3/8", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 30.48, "step": 14, "kind": "action", "summary": "step 14: clicked '5/4'", "answers_seen": ["5/4"]}
+{"t": 32.33, "step": 15, "kind": "screen", "texts": ["Question 6 of 6   |   Score: 4", "What is 1/3 + 1/3 ?", "2/3", "1/6", "2/6", "1/3", "Pause", "Quit to Menu"], "buttons": ["2/3", "1/6", "2/6", "1/3", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 32.47, "step": 15, "kind": "action", "summary": "step 15: clicked '2/3'", "answers_seen": ["2/3"]}
+{"t": 34.28, "step": 16, "kind": "screen", "texts": ["Mission Report", "Score: 5 / 6 (83%)", "Great job, astronaut! Keep exploring!", "Play Again", "Main Menu"], "buttons": ["Play Again", "Main Menu"], "entries": 0, "radios": []}
+{"t": 34.4, "step": 16, "kind": "action", "summary": "step 16: clicked 'Play Again'", "answers_seen": []}
+{"t": 36.23, "step": 17, "kind": "screen", "texts": ["Question 1 of 6   |   Score: 0", "What fraction equals 0.5 ?", "1/2", "1/3", "1/4", "2/5", "Pause", "Quit to Menu"], "buttons": ["1/2", "1/3", "1/4", "2/5", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 36.38, "step": 17, "kind": "action", "summary": "step 17: clicked '2/5'", "answers_seen": []}
+{"t": 38.18, "step": 18, "kind": "screen", "texts": ["Question 2 of 6   |   Score: 0", "What is 5/6 - 1/3 ?", "1/2", "2/3", "1/3", "4/6", "Pause", "Quit to Menu"], "buttons": ["1/2", "2/3", "1/3", "4/6", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 38.32, "step": 18, "kind": "action", "summary": "step 18: clicked '1/2'", "answers_seen": ["1/2"]}
+{"t": 40.12, "step": 19, "kind": "screen", "texts": ["Question 3 of 6   |   Score: 1", "What is 2/3 - 1/6 ?", "1/2", "1/3", "1/6", "3/6", "Pause", "Quit to Menu"], "buttons": ["1/2", "1/3", "1/6", "3/6", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 40.28, "step": 19, "kind": "action", "summary": "step 19: clicked '1/6'", "answers_seen": ["1/2"]}
+{"t": 42.09, "step": 20, "kind": "screen", "texts": ["Question 4 of 6   |   Score: 1", "What is 3/4 + 1/2 ?", "5/4", "1", "4/6", "3/8", "Pause", "Quit to Menu"], "buttons": ["5/4", "1", "4/6", "3/8", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 42.22, "step": 20, "kind": "action", "summary": "step 20: clicked '5/4'", "answers_seen": ["5/4"]}
+{"t": 44.03, "step": 21, "kind": "screen", "texts": ["Question 5 of 6   |   Score: 2", "What is 3/4 - 1/4 ?", "1/2", "2/4", "1", "1/4", "Pause", "Quit to Menu"], "buttons": ["1/2", "2/4", "1", "1/4", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 44.17, "step": 21, "kind": "action", "summary": "step 21: clicked '2/4'", "answers_seen": ["1/2"]}
+{"t": 46.12, "step": 22, "kind": "screen", "texts": ["Question 6 of 6   |   Score: 2", "What is 1/2 + 1/4 ?", "3/4", "2/6", "1/2", "1", "Pause", "Quit to Menu"], "buttons": ["3/4", "2/6", "1/2", "1", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 46.25, "step": 22, "kind": "action", "summary": "step 22: clicked '3/4'", "answers_seen": ["3/4"]}
+{"t": 48.13, "step": 23, "kind": "screen", "texts": ["Mission Report", "Score: 3 / 6 (50%)", "Good effort — the cosmos awaits more practice!", "Play Again", "Main Menu"], "buttons": ["Play Again", "Main Menu"], "entries": 0, "radios": []}
+{"t": 48.26, "step": 23, "kind": "action", "summary": "step 23: clicked 'Play Again'", "answers_seen": []}
+{"t": 50.08, "step": 24, "kind": "screen", "texts": ["Question 1 of 6   |   Score: 0", "What is 2/3 - 1/6 ?", "1/2", "1/3", "1/6", "3/6", "Pause", "Quit to Menu"], "buttons": ["1/2", "1/3", "1/6", "3/6", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 50.2, "step": 24, "kind": "action", "summary": "step 24: clicked '3/6'", "answers_seen": ["1/2"]}
+{"t": 52.01, "step": 25, "kind": "screen", "texts": ["Question 2 of 6   |   Score: 0", "What is 1/2 * 1/2 ?", "1/4", "1", "1/2", "2/4", "Pause", "Quit to Menu"], "buttons": ["1/4", "1", "1/2", "2/4", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 52.13, "step": 25, "kind": "action", "summary": "step 25: clicked '1/4'", "answers_seen": ["1/4"]}
+{"t": 54.15, "step": 26, "kind": "screen", "texts": ["Question 3 of 6   |   Score: 1", "What is 5/6 - 1/3 ?", "1/2", "2/3", "1/3", "4/6", "Pause", "Quit to Menu"], "buttons": ["1/2", "2/3", "1/3", "4/6", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 54.28, "step": 26, "kind": "action", "summary": "step 26: clicked '4/6'", "answers_seen": ["1/2"]}
+{"t": 56.09, "step": 27, "kind": "screen", "texts": ["Question 4 of 6   |   Score: 1", "What is 3/4 + 1/2 ?", "5/4", "1", "4/6", "3/8", "Pause", "Quit to Menu"], "buttons": ["5/4", "1", "4/6", "3/8", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 56.22, "step": 27, "kind": "action", "summary": "step 27: clicked '1'", "answers_seen": ["5/4"]}
+{"t": 58.02, "step": 28, "kind": "screen", "texts": ["Question 5 of 6   |   Score: 1", "What is 2/3 * 3/4 ?", "1/2", "6/7", "5/12", "2/4", "Pause", "Quit to Menu"], "buttons": ["1/2", "6/7", "5/12", "2/4", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 58.18, "step": 28, "kind": "action", "summary": "step 28: clicked '6/7'", "answers_seen": ["1/2"]}
+{"t": 60.17, "step": 29, "kind": "screen", "texts": ["Question 6 of 6   |   Score: 1", "What is 1/5 + 2/5 ?", "3/5", "3/10", "2/5", "1", "Pause", "Quit to Menu"], "buttons": ["3/5", "3/10", "2/5", "1", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 60.3, "step": 29, "kind": "action", "summary": "step 29: clicked '3/5'", "answers_seen": ["3/5"]}
+{"t": 62.11, "step": 30, "kind": "screen", "texts": ["Mission Report", "Score: 2 / 6 (33%)", "Don't give up — every fraction gets you closer!", "Play Again", "Main Menu"], "buttons": ["Play Again", "Main Menu"], "entries": 0, "radios": []}
+{"t": 62.23, "step": 30, "kind": "action", "summary": "step 30: clicked 'Play Again'", "answers_seen": []}
+{"t": 64.18, "step": 31, "kind": "screen", "texts": ["Question 1 of 6   |   Score: 0", "What is 2/3 - 1/6 ?", "1/2", "1/3", "1/6", "3/6", "Pause", "Quit to Menu"], "buttons": ["1/2", "1/3", "1/6", "3/6", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 64.31, "step": 31, "kind": "action", "summary": "step 31: clicked 'Pause'", "answers_seen": ["1/2"]}
+{"t": 66.18, "step": 32, "kind": "screen", "texts": ["Game paused.", "Resume"], "buttons": ["Resume"], "entries": 0, "radios": []}
+{"t": 66.3, "step": 32, "kind": "action", "summary": "step 32: clicked 'Resume'", "answers_seen": []}
+{"t": 68.19, "step": 33, "kind": "screen", "texts": ["Question 1 of 6   |   Score: 0", "What is 2/3 - 1/6 ?", "1/2", "1/3", "1/6", "3/6", "Pause", "Quit to Menu"], "buttons": ["1/2", "1/3", "1/6", "3/6", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 68.34, "step": 33, "kind": "action", "summary": "step 33: clicked '1/2'", "answers_seen": ["1/2"]}
+{"t": 70.2, "step": 34, "kind": "screen", "texts": ["Question 2 of 6   |   Score: 1", "What is 3/4 - 1/4 ?", "1/2", "2/4", "1", "1/4", "Pause", "Quit to Menu"], "buttons": ["1/2", "2/4", "1", "1/4", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 70.32, "step": 34, "kind": "action", "summary": "step 34: clicked '2/4'", "answers_seen": ["1/2"]}
+{"t": 72.14, "step": 35, "kind": "screen", "texts": ["Question 3 of 6   |   Score: 1", "What is 1/2 * 1/2 ?", "1/4", "1", "1/2", "2/4", "Pause", "Quit to Menu"], "buttons": ["1/4", "1", "1/2", "2/4", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 72.27, "step": 35, "kind": "action", "summary": "step 35: clicked '1/4'", "answers_seen": ["1/4"]}
+{"t": 74.08, "step": 36, "kind": "screen", "texts": ["Question 4 of 6   |   Score: 2", "What is 5/6 - 1/3 ?", "1/2", "2/3", "1/3", "4/6", "Pause", "Quit to Menu"], "buttons": ["1/2", "2/3", "1/3", "4/6", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 74.2, "step": 36, "kind": "action", "summary": "step 36: clicked '1/3'", "answers_seen": ["1/2"]}
+{"t": 76.22, "step": 37, "kind": "screen", "texts": ["Question 5 of 6   |   Score: 2", "What is 1/5 + 2/5 ?", "3/5", "3/10", "2/5", "1", "Pause", "Quit to Menu"], "buttons": ["3/5", "3/10", "2/5", "1", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 76.4, "step": 37, "kind": "action", "summary": "step 37: clicked '3/5'", "answers_seen": ["3/5"]}
+{"t": 78.22, "step": 38, "kind": "screen", "texts": ["Question 6 of 6   |   Score: 3", "What is 1/3 + 1/3 ?", "2/3", "1/6", "2/6", "1/3", "Pause", "Quit to Menu"], "buttons": ["2/3", "1/6", "2/6", "1/3", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 78.39, "step": 38, "kind": "action", "summary": "step 38: clicked '2/3'", "answers_seen": ["2/3"]}
+{"t": 80.19, "step": 39, "kind": "screen", "texts": ["Mission Report", "Score: 4 / 6 (67%)", "Good effort — the cosmos awaits more practice!", "Play Again", "Main Menu"], "buttons": ["Play Again", "Main Menu"], "entries": 0, "radios": []}
+{"t": 80.37, "step": 39, "kind": "action", "summary": "step 39: clicked 'Main Menu'", "answers_seen": []}
+{"t": 82.2, "step": 40, "kind": "screen", "texts": ["Space Fractions", "Play Game", "View Score", "View Help", "Admin (Update Questions)", "Admin Login", "Quit"], "buttons": ["Play Game", "View Score", "View Help", "Admin (Update Questions)", "Admin Login", "Quit"], "entries": 0, "radios": []}
+{"t": 82.33, "step": 40, "kind": "action", "summary": "step 40: clicked 'View Score'", "answers_seen": []}
+{"t": 84.14, "step": 41, "kind": "screen", "texts": ["Score History", "guest 4/6 2026-11-09T18:08:26", "guest 2/6 2026-11-09T18:08:07", "guest 3/6 2026-11-09T18:07:53", "guest 5/6 2026-11-09T18:07:39", "guest 6/6 2026-11-09T18:07:26", "Back"], "buttons": ["Back"], "entries": 0, "radios": []}
+{"t": 84.27, "step": 41, "kind": "action", "summary": "step 41: selected the first row of the list, clicked 'Back'", "answers_seen": []}
+{"t": 86.24, "step": 42, "kind": "screen", "texts": ["Space Fractions", "Play Game", "View Score", "View Help", "Admin (Update Questions)", "Admin Login", "Quit"], "buttons": ["Play Game", "View Score", "View Help", "Admin (Update Questions)", "Admin Login", "Quit"], "entries": 0, "radios": []}
+{"t": 86.37, "step": 42, "kind": "action", "summary": "step 42: clicked 'View Help'", "answers_seen": []}
+{"t": 88.2, "step": 43, "kind": "screen", "texts": ["How to Play", "Space Fractions presents a series of fraction questions.\n\n• Read the question and choose one of the four options.\n• Each correct answer earns 1 point.\n• You can Pause at any time and Resume later.\n• Your final score is shown in the ending scene.\n\nAdmins can sign in to add, edit or remove questions.", "Back"], "buttons": ["Back"], "entries": 0, "radios": []}
+{"t": 88.32, "step": 43, "kind": "action", "summary": "step 43: clicked 'Back'", "answers_seen": []}
+{"t": 90.26, "step": 44, "kind": "screen", "texts": ["Space Fractions", "Play Game", "View Score", "View Help", "Admin (Update Questions)", "Admin Login", "Quit"], "buttons": ["Play Game", "View Score", "View Help", "Admin (Update Questions)", "Admin Login", "Quit"], "entries": 0, "radios": []}
+{"t": 90.39, "step": 44, "kind": "action", "summary": "step 44: clicked 'Admin (Update Questions)'", "answers_seen": []}
+{"t": 90.39, "step": 44, "kind": "dialog", "text": "[showinfo] Admin: You must sign in as an admin first."}
+{"t": 90.39, "step": 44, "kind": "dialog", "text": "[askstring] Admin login: Username: → admin"}
+{"t": 90.39, "step": 44, "kind": "dialog", "text": "[askstring] Admin login: Password: → admin123"}
+{"t": 90.53, "step": 44, "kind": "dialog", "text": "[showinfo] Admin: Signed in as admin."}
+{"t": 92.36, "step": 45, "kind": "screen", "texts": ["Question Bank (Admin)", "What is 1/2 + 1/4 ? 3/4", "What is 3/4 - 1/4 ? 1/2", "What is 1/3 + 1/3 ? 2/3", "What is 1/2 * 1/2 ? 1/4", "What is 2/3 - 1/6 ? 1/2", "What is 3/4 + 1/2 ? 5/4", "What fraction equals 0.5 ? 1/2", "What is 5/6 - 1/3 ? 1/2", "What is 1/5 + 2/5 ? 3/5", "What is 2/3 * 3/4 ? 1/2", "Add", "Edit", "Delete", "Back"], "buttons": ["Add", "Edit", "Delete", "Back"], "entries": 0, "radios": []}
+{"t": 92.49, "step": 45, "kind": "action", "summary": "step 45: selected the first row of the list, clicked 'Add'", "answers_seen": ["3/4", "1/2", "2/3", "1/4", "1/2", "5/4", "1/2", "3/5", "1/2"]}
+{"t": 92.49, "step": 45, "kind": "dialog", "text": "[askstring] Add question: Prompt: → What is 1/2 + 1/4?"}
+{"t": 92.49, "step": 45, "kind": "dialog", "text": "[askstring] Add question: Option 1: → 3/4"}
+{"t": 92.49, "step": 45, "kind": "dialog", "text": "[askstring] Add question: Option 2: → 1/2"}
+{"t": 92.49, "step": 45, "kind": "dialog", "text": "[askstring] Add question: Option 3: → 2/3"}
+{"t": 92.49, "step": 45, "kind": "dialog", "text": "[askstring] Add question: Option 4: → 1/4"}
+{"t": 92.49, "step": 45, "kind": "dialog", "text": "[askstring] Add question: Correct answer (must match an option): → 3/4"}
+{"t": 94.33, "step": 46, "kind": "screen", "texts": ["Question Bank (Admin)", "What is 1/2 + 1/4 ? 3/4", "What is 3/4 - 1/4 ? 1/2", "What is 1/3 + 1/3 ? 2/3", "What is 1/2 * 1/2 ? 1/4", "What is 2/3 - 1/6 ? 1/2", "What is 3/4 + 1/2 ? 5/4", "What fraction equals 0.5 ? 1/2", "What is 5/6 - 1/3 ? 1/2", "What is 1/5 + 2/5 ? 3/5", "What is 2/3 * 3/4 ? 1/2", "Add", "Edit", "Delete", "Back"], "buttons": ["Add", "Edit", "Delete", "Back"], "entries": 0, "radios": []}
+{"t": 94.45, "step": 46, "kind": "action", "summary": "step 46: selected the first row of the list, clicked 'Edit'", "answers_seen": ["3/4", "1/2", "2/3", "1/4", "1/2", "5/4", "1/2", "3/5", "1/2"]}
+{"t": 94.47, "step": 46, "kind": "dialog", "text": "[askstring] Edit question: Prompt: → What is 1/2 + 1/4?"}
+{"t": 94.47, "step": 46, "kind": "dialog", "text": "[askstring] Edit question: Option 1: → 3/4"}
+{"t": 94.47, "step": 46, "kind": "dialog", "text": "[askstring] Edit question: Option 2: → 1/2"}
+{"t": 94.47, "step": 46, "kind": "dialog", "text": "[askstring] Edit question: Option 3: → 2/3"}
+{"t": 94.47, "step": 46, "kind": "dialog", "text": "[askstring] Edit question: Option 4: → 1/4"}
+{"t": 94.47, "step": 46, "kind": "dialog", "text": "[askstring] Edit question: Correct answer: → 3/4"}
+{"t": 96.34, "step": 47, "kind": "screen", "texts": ["Question Bank (Admin)", "What is 1/2 + 1/4? 3/4", "What is 3/4 - 1/4 ? 1/2", "What is 1/3 + 1/3 ? 2/3", "What is 1/2 * 1/2 ? 1/4", "What is 2/3 - 1/6 ? 1/2", "What is 3/4 + 1/2 ? 5/4", "What fraction equals 0.5 ? 1/2", "What is 5/6 - 1/3 ? 1/2", "What is 1/5 + 2/5 ? 3/5", "What is 2/3 * 3/4 ? 1/2", "Add", "Edit", "Delete", "Back"], "buttons": ["Add", "Edit", "Delete", "Back"], "entries": 0, "radios": []}
+{"t": 96.48, "step": 47, "kind": "action", "summary": "step 47: selected the first row of the list, clicked 'Add'", "answers_seen": ["3/4", "1/2", "2/3", "1/4", "1/2", "5/4", "1/2", "3/5", "1/2"]}
+{"t": 96.48, "step": 47, "kind": "dialog", "text": "[askstring] Add question: Prompt: → What is 1/2 + 1/4?"}
+{"t": 96.48, "step": 47, "kind": "dialog", "text": "[askstring] Add question: Option 1: → 3/4"}
+{"t": 96.48, "step": 47, "kind": "dialog", "text": "[askstring] Add question: Option 2: → 1/2"}
+{"t": 96.48, "step": 47, "kind": "dialog", "text": "[askstring] Add question: Option 3: → 2/3"}
+{"t": 96.48, "step": 47, "kind": "dialog", "text": "[askstring] Add question: Option 4: → 1/4"}
+{"t": 96.48, "step": 47, "kind": "dialog", "text": "[askstring] Add question: Correct answer (must match an option): → 3/4"}
+{"t": 98.33, "step": 48, "kind": "screen", "texts": ["Question Bank (Admin)", "What is 1/2 + 1/4? 3/4", "What is 3/4 - 1/4 ? 1/2", "What is 1/3 + 1/3 ? 2/3", "What is 1/2 * 1/2 ? 1/4", "What is 2/3 - 1/6 ? 1/2", "What is 3/4 + 1/2 ? 5/4", "What fraction equals 0.5 ? 1/2", "What is 5/6 - 1/3 ? 1/2", "What is 1/5 + 2/5 ? 3/5", "What is 2/3 * 3/4 ? 1/2", "Add", "Edit", "Delete", "Back"], "buttons": ["Add", "Edit", "Delete", "Back"], "entries": 0, "radios": []}
+{"t": 98.46, "step": 48, "kind": "action", "summary": "step 48: selected the first row of the list, clicked 'Edit'", "answers_seen": ["3/4", "1/2", "2/3", "1/4", "1/2", "5/4", "1/2", "3/5", "1/2"]}
+{"t": 98.46, "step": 48, "kind": "dialog", "text": "[askstring] Edit question: Prompt: → What is 1/2 + 1/4?"}
+{"t": 98.46, "step": 48, "kind": "dialog", "text": "[askstring] Edit question: Option 1: → 3/4"}
+{"t": 98.46, "step": 48, "kind": "dialog", "text": "[askstring] Edit question: Option 2: → 1/2"}
+{"t": 98.46, "step": 48, "kind": "dialog", "text": "[askstring] Edit question: Option 3: → 2/3"}
+{"t": 98.46, "step": 48, "kind": "dialog", "text": "[askstring] Edit question: Option 4: → 1/4"}
+{"t": 98.46, "step": 48, "kind": "dialog", "text": "[askstring] Edit question: Correct answer: → 3/4"}
+{"t": 100.35, "step": 49, "kind": "screen", "texts": ["Question Bank (Admin)", "What is 1/2 + 1/4? 3/4", "What is 3/4 - 1/4 ? 1/2", "What is 1/3 + 1/3 ? 2/3", "What is 1/2 * 1/2 ? 1/4", "What is 2/3 - 1/6 ? 1/2", "What is 3/4 + 1/2 ? 5/4", "What fraction equals 0.5 ? 1/2", "What is 5/6 - 1/3 ? 1/2", "What is 1/5 + 2/5 ? 3/5", "What is 2/3 * 3/4 ? 1/2", "Add", "Edit", "Delete", "Back"], "buttons": ["Add", "Edit", "Delete", "Back"], "entries": 0, "radios": []}
+{"t": 100.47, "step": 49, "kind": "action", "summary": "step 49: selected the first row of the list, clicked 'Back'", "answers_seen": ["3/4", "1/2", "2/3", "1/4", "1/2", "5/4", "1/2", "3/5", "1/2"]}
+{"t": 102.36, "step": 50, "kind": "screen", "texts": ["Space Fractions", "Player: admin", "Play Game", "View Score", "View Help", "Admin (Update Questions)", "Admin Login", "Quit"], "buttons": ["Play Game", "View Score", "View Help", "Admin (Update Questions)", "Admin Login", "Quit"], "entries": 0, "radios": []}
+{"t": 102.48, "step": 50, "kind": "action", "summary": "step 50: clicked 'Play Game'", "answers_seen": []}
+{"t": 104.3, "step": 51, "kind": "screen", "texts": ["Question 1 of 6   |   Score: 0", "What is 2/3 * 3/4 ?", "1/2", "6/7", "5/12", "2/4", "Pause", "Quit to Menu"], "buttons": ["1/2", "6/7", "5/12", "2/4", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 104.43, "step": 51, "kind": "action", "summary": "step 51: clicked '5/12'", "answers_seen": ["1/2"]}
+{"t": 106.23, "step": 52, "kind": "screen", "texts": ["Question 2 of 6   |   Score: 0", "What fraction equals 0.5 ?", "1/2", "1/3", "1/4", "2/5", "Pause", "Quit to Menu"], "buttons": ["1/2", "1/3", "1/4", "2/5", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 106.37, "step": 52, "kind": "action", "summary": "step 52: clicked '2/5'", "answers_seen": []}
+{"t": 108.18, "step": 53, "kind": "screen", "texts": ["Question 3 of 6   |   Score: 0", "What is 1/2 + 1/4?", "3/4", "1/2", "2/3", "1/4", "Pause", "Quit to Menu"], "buttons": ["3/4", "1/2", "2/3", "1/4", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 108.35, "step": 53, "kind": "action", "summary": "step 53: clicked '3/4'", "answers_seen": ["3/4"]}
+{"t": 110.38, "step": 54, "kind": "screen", "texts": ["Question 4 of 6   |   Score: 1", "What is 1/2 + 1/4?", "3/4", "1/2", "2/3", "1/4", "Pause", "Quit to Menu"], "buttons": ["3/4", "1/2", "2/3", "1/4", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 110.5, "step": 54, "kind": "action", "summary": "step 54: clicked '3/4'", "answers_seen": ["3/4"]}
+{"t": 112.38, "step": 55, "kind": "screen", "texts": ["Question 5 of 6   |   Score: 2", "What is 3/4 + 1/2 ?", "5/4", "1", "4/6", "3/8", "Pause", "Quit to Menu"], "buttons": ["5/4", "1", "4/6", "3/8", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 112.5, "step": 55, "kind": "action", "summary": "step 55: clicked '5/4'", "answers_seen": ["5/4"]}
+{"t": 114.31, "step": 56, "kind": "screen", "texts": ["Question 6 of 6   |   Score: 3", "What is 2/3 - 1/6 ?", "1/2", "1/3", "1/6", "3/6", "Pause", "Quit to Menu"], "buttons": ["1/2", "1/3", "1/6", "3/6", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 114.45, "step": 56, "kind": "action", "summary": "step 56: clicked '1/6'", "answers_seen": ["1/2"]}
+{"t": 116.26, "step": 57, "kind": "screen", "texts": ["Mission Report", "Score: 3 / 6 (50%)", "Good effort — the cosmos awaits more practice!", "Play Again", "Main Menu"], "buttons": ["Play Again", "Main Menu"], "entries": 0, "radios": []}
+{"t": 116.4, "step": 57, "kind": "action", "summary": "step 57: clicked 'Main Menu'", "answers_seen": []}
+{"t": 118.4, "step": 58, "kind": "screen", "texts": ["Space Fractions", "Player: admin", "Play Game", "View Score", "View Help", "Admin (Update Questions)", "Admin Login", "Quit"], "buttons": ["Play Game", "View Score", "View Help", "Admin (Update Questions)", "Admin Login", "Quit"], "entries": 0, "radios": []}
+{"t": 118.52, "step": 58, "kind": "action", "summary": "step 58: clicked 'Admin Login'", "answers_seen": []}
+{"t": 118.52, "step": 58, "kind": "dialog", "text": "[askstring] Admin login: Username: → admin"}
+{"t": 118.52, "step": 58, "kind": "dialog", "text": "[askstring] Admin login: Password: → admin123"}
+{"t": 118.66, "step": 58, "kind": "dialog", "text": "[showinfo] Admin: Signed in as admin."}
+{"t": 120.48, "step": 59, "kind": "screen", "texts": ["Question Bank (Admin)", "What is 1/2 + 1/4? 3/4", "What is 3/4 - 1/4 ? 1/2", "What is 1/3 + 1/3 ? 2/3", "What is 1/2 * 1/2 ? 1/4", "What is 2/3 - 1/6 ? 1/2", "What is 3/4 + 1/2 ? 5/4", "What fraction equals 0.5 ? 1/2", "What is 5/6 - 1/3 ? 1/2", "What is 1/5 + 2/5 ? 3/5", "What is 2/3 * 3/4 ? 1/2", "Add", "Edit", "Delete", "Back"], "buttons": ["Add", "Edit", "Delete", "Back"], "entries": 0, "radios": []}
+{"t": 120.63, "step": 59, "kind": "action", "summary": "step 59: selected the first row of the list, clicked 'Delete'", "answers_seen": ["3/4", "1/2", "2/3", "1/4", "1/2", "5/4", "1/2", "3/5", "1/2"]}
+{"t": 120.63, "step": 59, "kind": "dialog", "text": "[askyesno] Delete: Delete this question?"}
+{"t": 122.45, "step": 60, "kind": "screen", "texts": ["Question Bank (Admin)", "What is 3/4 - 1/4 ? 1/2", "What is 1/3 + 1/3 ? 2/3", "What is 1/2 * 1/2 ? 1/4", "What is 2/3 - 1/6 ? 1/2", "What is 3/4 + 1/2 ? 5/4", "What fraction equals 0.5 ? 1/2", "What is 5/6 - 1/3 ? 1/2", "What is 1/5 + 2/5 ? 3/5", "What is 2/3 * 3/4 ? 1/2", "What is 1/2 + 1/4? 3/4", "Add", "Edit", "Delete", "Back"], "buttons": ["Add", "Edit", "Delete", "Back"], "entries": 0, "radios": []}
+{"t": 122.6, "step": 60, "kind": "action", "summary": "step 60: selected the first row of the list, clicked 'Add'", "answers_seen": ["1/2", "2/3", "1/4", "1/2", "5/4", "1/2", "3/5", "1/2", "3/4"]}
+{"t": 122.6, "step": 60, "kind": "dialog", "text": "[askstring] Add question: Prompt: → What is 1/2 + 1/4?"}
+{"t": 122.6, "step": 60, "kind": "dialog", "text": "[askstring] Add question: Option 1: → 3/4"}
+{"t": 122.6, "step": 60, "kind": "dialog", "text": "[askstring] Add question: Option 2: → 1/2"}
+{"t": 122.6, "step": 60, "kind": "dialog", "text": "[askstring] Add question: Option 3: → 2/3"}
+{"t": 122.6, "step": 60, "kind": "dialog", "text": "[askstring] Add question: Option 4: → 1/4"}
+{"t": 122.6, "step": 60, "kind": "dialog", "text": "[askstring] Add question: Correct answer (must match an option): → 3/4"}
+{"t": 124.47, "step": 61, "kind": "screen", "texts": ["Question Bank (Admin)", "What is 3/4 - 1/4 ? 1/2", "What is 1/3 + 1/3 ? 2/3", "What is 1/2 * 1/2 ? 1/4", "What is 2/3 - 1/6 ? 1/2", "What is 3/4 + 1/2 ? 5/4", "What fraction equals 0.5 ? 1/2", "What is 5/6 - 1/3 ? 1/2", "What is 1/5 + 2/5 ? 3/5", "What is 2/3 * 3/4 ? 1/2", "What is 1/2 + 1/4? 3/4", "Add", "Edit", "Delete", "Back"], "buttons": ["Add", "Edit", "Delete", "Back"], "entries": 0, "radios": []}
+{"t": 124.6, "step": 61, "kind": "action", "summary": "step 61: selected the first row of the list, clicked 'Edit'", "answers_seen": ["1/2", "2/3", "1/4", "1/2", "5/4", "1/2", "3/5", "1/2", "3/4"]}
+{"t": 124.6, "step": 61, "kind": "dialog", "text": "[askstring] Edit question: Prompt: → What is 1/2 + 1/4?"}
+{"t": 124.6, "step": 61, "kind": "dialog", "text": "[askstring] Edit question: Option 1: → 3/4"}
+{"t": 124.6, "step": 61, "kind": "dialog", "text": "[askstring] Edit question: Option 2: → 1/2"}
+{"t": 124.6, "step": 61, "kind": "dialog", "text": "[askstring] Edit question: Option 3: → 2/3"}
+{"t": 124.6, "step": 61, "kind": "dialog", "text": "[askstring] Edit question: Option 4: → 1/4"}
+{"t": 124.6, "step": 61, "kind": "dialog", "text": "[askstring] Edit question: Correct answer: → 3/4"}
+{"t": 126.48, "step": 62, "kind": "screen", "texts": ["Question Bank (Admin)", "What is 1/2 + 1/4? 3/4", "What is 1/3 + 1/3 ? 2/3", "What is 1/2 * 1/2 ? 1/4", "What is 2/3 - 1/6 ? 1/2", "What is 3/4 + 1/2 ? 5/4", "What fraction equals 0.5 ? 1/2", "What is 5/6 - 1/3 ? 1/2", "What is 1/5 + 2/5 ? 3/5", "What is 2/3 * 3/4 ? 1/2", "What is 1/2 + 1/4? 3/4", "Add", "Edit", "Delete", "Back"], "buttons": ["Add", "Edit", "Delete", "Back"], "entries": 0, "radios": []}
+{"t": 126.6, "step": 62, "kind": "action", "summary": "step 62: selected the first row of the list, clicked 'Add'", "answers_seen": ["3/4", "2/3", "1/4", "1/2", "5/4", "1/2", "3/5", "1/2", "3/4"]}
+{"t": 126.6, "step": 62, "kind": "dialog", "text": "[askstring] Add question: Prompt: → What is 1/2 + 1/4?"}
+{"t": 126.6, "step": 62, "kind": "dialog", "text": "[askstring] Add question: Option 1: → 3/4"}
+{"t": 126.6, "step": 62, "kind": "dialog", "text": "[askstring] Add question: Option 2: → 1/2"}
+{"t": 126.6, "step": 62, "kind": "dialog", "text": "[askstring] Add question: Option 3: → 2/3"}
+{"t": 126.6, "step": 62, "kind": "dialog", "text": "[askstring] Add question: Option 4: → 1/4"}
+{"t": 126.6, "step": 62, "kind": "dialog", "text": "[askstring] Add question: Correct answer (must match an option): → 3/4"}
+{"t": 128.42, "step": 63, "kind": "screen", "texts": ["Question Bank (Admin)", "What is 1/2 + 1/4? 3/4", "What is 1/3 + 1/3 ? 2/3", "What is 1/2 * 1/2 ? 1/4", "What is 2/3 - 1/6 ? 1/2", "What is 3/4 + 1/2 ? 5/4", "What fraction equals 0.5 ? 1/2", "What is 5/6 - 1/3 ? 1/2", "What is 1/5 + 2/5 ? 3/5", "What is 2/3 * 3/4 ? 1/2", "What is 1/2 + 1/4? 3/4", "Add", "Edit", "Delete", "Back"], "buttons": ["Add", "Edit", "Delete", "Back"], "entries": 0, "radios": []}
+{"t": 128.57, "step": 63, "kind": "action", "summary": "step 63: selected the first row of the list, clicked 'Edit'", "answers_seen": ["3/4", "2/3", "1/4", "1/2", "5/4", "1/2", "3/5", "1/2", "3/4"]}
+{"t": 128.57, "step": 63, "kind": "dialog", "text": "[askstring] Edit question: Prompt: → What is 1/2 + 1/4?"}
+{"t": 128.57, "step": 63, "kind": "dialog", "text": "[askstring] Edit question: Option 1: → 3/4"}
+{"t": 128.57, "step": 63, "kind": "dialog", "text": "[askstring] Edit question: Option 2: → 1/2"}
+{"t": 128.57, "step": 63, "kind": "dialog", "text": "[askstring] Edit question: Option 3: → 2/3"}
+{"t": 128.57, "step": 63, "kind": "dialog", "text": "[askstring] Edit question: Option 4: → 1/4"}
+{"t": 128.57, "step": 63, "kind": "dialog", "text": "[askstring] Edit question: Correct answer: → 3/4"}
+{"t": 130.49, "step": 64, "kind": "screen", "texts": ["Question Bank (Admin)", "What is 1/2 + 1/4? 3/4", "What is 1/3 + 1/3 ? 2/3", "What is 1/2 * 1/2 ? 1/4", "What is 2/3 - 1/6 ? 1/2", "What is 3/4 + 1/2 ? 5/4", "What fraction equals 0.5 ? 1/2", "What is 5/6 - 1/3 ? 1/2", "What is 1/5 + 2/5 ? 3/5", "What is 2/3 * 3/4 ? 1/2", "What is 1/2 + 1/4? 3/4", "Add", "Edit", "Delete", "Back"], "buttons": ["Add", "Edit", "Delete", "Back"], "entries": 0, "radios": []}
+{"t": 130.63, "step": 64, "kind": "action", "summary": "step 64: selected the first row of the list, clicked 'Back'", "answers_seen": ["3/4", "2/3", "1/4", "1/2", "5/4", "1/2", "3/5", "1/2", "3/4"]}
+{"t": 132.5, "step": 65, "kind": "screen", "texts": ["Space Fractions", "Player: admin", "Play Game", "View Score", "View Help", "Admin (Update Questions)", "Admin Login", "Quit"], "buttons": ["Play Game", "View Score", "View Help", "Admin (Update Questions)", "Admin Login", "Quit"], "entries": 0, "radios": []}
+{"t": 132.69, "step": 65, "kind": "action", "summary": "step 65: clicked 'View Score'", "answers_seen": []}
+{"t": 134.51, "step": 66, "kind": "screen", "texts": ["Score History", "admin 3/6 2026-11-09T18:09:01", "Back"], "buttons": ["Back"], "entries": 0, "radios": []}
+{"t": 134.68, "step": 66, "kind": "action", "summary": "step 66: selected the first row of the list, clicked 'Back'", "answers_seen": []}
+{"t": 136.51, "step": 67, "kind": "screen", "texts": ["Space Fractions", "Player: admin", "Play Game", "View Score", "View Help", "Admin (Update Questions)", "Admin Login", "Quit"], "buttons": ["Play Game", "View Score", "View Help", "Admin (Update Questions)", "Admin Login", "Quit"], "entries": 0, "radios": []}
+{"t": 136.67, "step": 67, "kind": "action", "summary": "step 67: clicked 'View Help'", "answers_seen": []}
+{"t": 138.48, "step": 68, "kind": "screen", "texts": ["How to Play", "Space Fractions presents a series of fraction questions.\n\n• Read the question and choose one of the four options.\n• Each correct answer earns 1 point.\n• You can Pause at any time and Resume later.\n• Your final score is shown in the ending scene.\n\nAdmins can sign in to add, edit or remove questions.", "Back"], "buttons": ["Back"], "entries": 0, "radios": []}
+{"t": 138.6, "step": 68, "kind": "action", "summary": "step 68: clicked 'Back'", "answers_seen": []}
+{"t": 140.52, "step": 69, "kind": "screen", "texts": ["Space Fractions", "Player: admin", "Play Game", "View Score", "View Help", "Admin (Update Questions)", "Admin Login", "Quit"], "buttons": ["Play Game", "View Score", "View Help", "Admin (Update Questions)", "Admin Login", "Quit"], "entries": 0, "radios": []}
+{"t": 140.67, "step": 69, "kind": "action", "summary": "step 69: clicked 'Admin (Update Questions)'", "answers_seen": []}
+{"t": 142.51, "step": 70, "kind": "screen", "texts": ["Question Bank (Admin)", "What is 1/2 + 1/4? 3/4", "What is 1/3 + 1/3 ? 2/3", "What is 1/2 * 1/2 ? 1/4", "What is 2/3 - 1/6 ? 1/2", "What is 3/4 + 1/2 ? 5/4", "What fraction equals 0.5 ? 1/2", "What is 5/6 - 1/3 ? 1/2", "What is 1/5 + 2/5 ? 3/5", "What is 2/3 * 3/4 ? 1/2", "What is 1/2 + 1/4? 3/4", "Add", "Edit", "Delete", "Back"], "buttons": ["Add", "Edit", "Delete", "Back"], "entries": 0, "radios": []}
+{"t": 142.66, "step": 70, "kind": "action", "summary": "step 70: selected the first row of the list, clicked 'Delete'", "answers_seen": ["3/4", "2/3", "1/4", "1/2", "5/4", "1/2", "3/5", "1/2", "3/4"]}
+{"t": 142.66, "step": 70, "kind": "dialog", "text": "[askyesno] Delete: Delete this question?"}
+{"t": 144.53, "step": 71, "kind": "screen", "texts": ["Question Bank (Admin)", "What is 1/3 + 1/3 ? 2/3", "What is 1/2 * 1/2 ? 1/4", "What is 2/3 - 1/6 ? 1/2", "What is 3/4 + 1/2 ? 5/4", "What fraction equals 0.5 ? 1/2", "What is 5/6 - 1/3 ? 1/2", "What is 1/5 + 2/5 ? 3/5", "What is 2/3 * 3/4 ? 1/2", "What is 1/2 + 1/4? 3/4", "What is 1/2 + 1/4? 3/4", "Add", "Edit", "Delete", "Back"], "buttons": ["Add", "Edit", "Delete", "Back"], "entries": 0, "radios": []}
+{"t": 144.66, "step": 71, "kind": "action", "summary": "step 71: selected the first row of the list, clicked 'Add'", "answers_seen": ["2/3", "1/4", "1/2", "5/4", "1/2", "3/5", "1/2", "3/4", "3/4"]}
+{"t": 144.66, "step": 71, "kind": "dialog", "text": "[askstring] Add question: Prompt: → What is 1/2 + 1/4?"}
+{"t": 144.66, "step": 71, "kind": "dialog", "text": "[askstring] Add question: Option 1: → 3/4"}
+{"t": 144.66, "step": 71, "kind": "dialog", "text": "[askstring] Add question: Option 2: → 1/2"}
+{"t": 144.66, "step": 71, "kind": "dialog", "text": "[askstring] Add question: Option 3: → 2/3"}
+{"t": 144.66, "step": 71, "kind": "dialog", "text": "[askstring] Add question: Option 4: → 1/4"}
+{"t": 144.66, "step": 71, "kind": "dialog", "text": "[askstring] Add question: Correct answer (must match an option): → 3/4"}
+{"t": 146.48, "step": 72, "kind": "screen", "texts": ["Question Bank (Admin)", "What is 1/3 + 1/3 ? 2/3", "What is 1/2 * 1/2 ? 1/4", "What is 2/3 - 1/6 ? 1/2", "What is 3/4 + 1/2 ? 5/4", "What fraction equals 0.5 ? 1/2", "What is 5/6 - 1/3 ? 1/2", "What is 1/5 + 2/5 ? 3/5", "What is 2/3 * 3/4 ? 1/2", "What is 1/2 + 1/4? 3/4", "What is 1/2 + 1/4? 3/4", "Add", "Edit", "Delete", "Back"], "buttons": ["Add", "Edit", "Delete", "Back"], "entries": 0, "radios": []}
+{"t": 146.65, "step": 72, "kind": "action", "summary": "step 72: selected the first row of the list, clicked 'Edit'", "answers_seen": ["2/3", "1/4", "1/2", "5/4", "1/2", "3/5", "1/2", "3/4", "3/4"]}
+{"t": 146.65, "step": 72, "kind": "dialog", "text": "[askstring] Edit question: Prompt: → What is 1/2 + 1/4?"}
+{"t": 146.65, "step": 72, "kind": "dialog", "text": "[askstring] Edit question: Option 1: → 3/4"}
+{"t": 146.65, "step": 72, "kind": "dialog", "text": "[askstring] Edit question: Option 2: → 1/2"}
+{"t": 146.65, "step": 72, "kind": "dialog", "text": "[askstring] Edit question: Option 3: → 2/3"}
+{"t": 146.65, "step": 72, "kind": "dialog", "text": "[askstring] Edit question: Option 4: → 1/4"}
+{"t": 146.65, "step": 72, "kind": "dialog", "text": "[askstring] Edit question: Correct answer: → 3/4"}
+{"t": 148.48, "step": 73, "kind": "screen", "texts": ["Question Bank (Admin)", "What is 1/2 + 1/4? 3/4", "What is 1/2 * 1/2 ? 1/4", "What is 2/3 - 1/6 ? 1/2", "What is 3/4 + 1/2 ? 5/4", "What fraction equals 0.5 ? 1/2", "What is 5/6 - 1/3 ? 1/2", "What is 1/5 + 2/5 ? 3/5", "What is 2/3 * 3/4 ? 1/2", "What is 1/2 + 1/4? 3/4", "What is 1/2 + 1/4? 3/4", "Add", "Edit", "Delete", "Back"], "buttons": ["Add", "Edit", "Delete", "Back"], "entries": 0, "radios": []}
+{"t": 148.64, "step": 73, "kind": "action", "summary": "step 73: selected the first row of the list, clicked 'Add'", "answers_seen": ["3/4", "1/4", "1/2", "5/4", "1/2", "3/5", "1/2", "3/4", "3/4"]}
+{"t": 148.64, "step": 73, "kind": "dialog", "text": "[askstring] Add question: Prompt: → What is 1/2 + 1/4?"}
+{"t": 148.64, "step": 73, "kind": "dialog", "text": "[askstring] Add question: Option 1: → 3/4"}
+{"t": 148.64, "step": 73, "kind": "dialog", "text": "[askstring] Add question: Option 2: → 1/2"}
+{"t": 148.64, "step": 73, "kind": "dialog", "text": "[askstring] Add question: Option 3: → 2/3"}
+{"t": 148.64, "step": 73, "kind": "dialog", "text": "[askstring] Add question: Option 4: → 1/4"}
+{"t": 148.64, "step": 73, "kind": "dialog", "text": "[askstring] Add question: Correct answer (must match an option): → 3/4"}
+{"t": 150.48, "step": 74, "kind": "screen", "texts": ["Question Bank (Admin)", "What is 1/2 + 1/4? 3/4", "What is 1/2 * 1/2 ? 1/4", "What is 2/3 - 1/6 ? 1/2", "What is 3/4 + 1/2 ? 5/4", "What fraction equals 0.5 ? 1/2", "What is 5/6 - 1/3 ? 1/2", "What is 1/5 + 2/5 ? 3/5", "What is 2/3 * 3/4 ? 1/2", "What is 1/2 + 1/4? 3/4", "What is 1/2 + 1/4? 3/4", "Add", "Edit", "Delete", "Back"], "buttons": ["Add", "Edit", "Delete", "Back"], "entries": 0, "radios": []}
+{"t": 150.61, "step": 74, "kind": "action", "summary": "step 74: selected the first row of the list, clicked 'Edit'", "answers_seen": ["3/4", "1/4", "1/2", "5/4", "1/2", "3/5", "1/2", "3/4", "3/4"]}
+{"t": 150.61, "step": 74, "kind": "dialog", "text": "[askstring] Edit question: Prompt: → What is 1/2 + 1/4?"}
+{"t": 150.61, "step": 74, "kind": "dialog", "text": "[askstring] Edit question: Option 1: → 3/4"}
+{"t": 150.61, "step": 74, "kind": "dialog", "text": "[askstring] Edit question: Option 2: → 1/2"}
+{"t": 150.61, "step": 74, "kind": "dialog", "text": "[askstring] Edit question: Option 3: → 2/3"}
+{"t": 150.61, "step": 74, "kind": "dialog", "text": "[askstring] Edit question: Option 4: → 1/4"}
+{"t": 150.61, "step": 74, "kind": "dialog", "text": "[askstring] Edit question: Correct answer: → 3/4"}
+{"t": 152.42, "step": 75, "kind": "screen", "texts": ["Question Bank (Admin)", "What is 1/2 + 1/4? 3/4", "What is 1/2 * 1/2 ? 1/4", "What is 2/3 - 1/6 ? 1/2", "What is 3/4 + 1/2 ? 5/4", "What fraction equals 0.5 ? 1/2", "What is 5/6 - 1/3 ? 1/2", "What is 1/5 + 2/5 ? 3/5", "What is 2/3 * 3/4 ? 1/2", "What is 1/2 + 1/4? 3/4", "What is 1/2 + 1/4? 3/4", "Add", "Edit", "Delete", "Back"], "buttons": ["Add", "Edit", "Delete", "Back"], "entries": 0, "radios": []}
+{"t": 152.54, "step": 75, "kind": "action", "summary": "step 75: selected the first row of the list, clicked 'Delete'", "answers_seen": ["3/4", "1/4", "1/2", "5/4", "1/2", "3/5", "1/2", "3/4", "3/4"]}
+{"t": 152.54, "step": 75, "kind": "dialog", "text": "[askyesno] Delete: Delete this question?"}
+{"t": 154.36, "step": 76, "kind": "screen", "texts": ["Question Bank (Admin)", "What is 1/2 * 1/2 ? 1/4", "What is 2/3 - 1/6 ? 1/2", "What is 3/4 + 1/2 ? 5/4", "What fraction equals 0.5 ? 1/2", "What is 5/6 - 1/3 ? 1/2", "What is 1/5 + 2/5 ? 3/5", "What is 2/3 * 3/4 ? 1/2", "What is 1/2 + 1/4? 3/4", "What is 1/2 + 1/4? 3/4", "What is 1/2 + 1/4? 3/4", "Add", "Edit", "Delete", "Back"], "buttons": ["Add", "Edit", "Delete", "Back"], "entries": 0, "radios": []}
+{"t": 154.49, "step": 76, "kind": "action", "summary": "step 76: selected the first row of the list, clicked 'Add'", "answers_seen": ["1/4", "1/2", "5/4", "1/2", "3/5", "1/2", "3/4", "3/4", "3/4"]}
+{"t": 154.49, "step": 76, "kind": "dialog", "text": "[askstring] Add question: Prompt: → What is 1/2 + 1/4?"}
+{"t": 154.49, "step": 76, "kind": "dialog", "text": "[askstring] Add question: Option 1: → 3/4"}
+{"t": 154.49, "step": 76, "kind": "dialog", "text": "[askstring] Add question: Option 2: → 1/2"}
+{"t": 154.49, "step": 76, "kind": "dialog", "text": "[askstring] Add question: Option 3: → 2/3"}
+{"t": 154.49, "step": 76, "kind": "dialog", "text": "[askstring] Add question: Option 4: → 1/4"}
+{"t": 154.49, "step": 76, "kind": "dialog", "text": "[askstring] Add question: Correct answer (must match an option): → 3/4"}
+{"t": 156.31, "step": 77, "kind": "screen", "texts": ["Question Bank (Admin)", "What is 1/2 * 1/2 ? 1/4", "What is 2/3 - 1/6 ? 1/2", "What is 3/4 + 1/2 ? 5/4", "What fraction equals 0.5 ? 1/2", "What is 5/6 - 1/3 ? 1/2", "What is 1/5 + 2/5 ? 3/5", "What is 2/3 * 3/4 ? 1/2", "What is 1/2 + 1/4? 3/4", "What is 1/2 + 1/4? 3/4", "What is 1/2 + 1/4? 3/4", "Add", "Edit", "Delete", "Back"], "buttons": ["Add", "Edit", "Delete", "Back"], "entries": 0, "radios": []}
+{"t": 156.48, "step": 77, "kind": "action", "summary": "step 77: selected the first row of the list, clicked 'Edit'", "answers_seen": ["1/4", "1/2", "5/4", "1/2", "3/5", "1/2", "3/4", "3/4", "3/4"]}
+{"t": 156.48, "step": 77, "kind": "dialog", "text": "[askstring] Edit question: Prompt: → What is 1/2 + 1/4?"}
+{"t": 156.48, "step": 77, "kind": "dialog", "text": "[askstring] Edit question: Option 1: → 3/4"}
+{"t": 156.48, "step": 77, "kind": "dialog", "text": "[askstring] Edit question: Option 2: → 1/2"}
+{"t": 156.48, "step": 77, "kind": "dialog", "text": "[askstring] Edit question: Option 3: → 2/3"}
+{"t": 156.48, "step": 77, "kind": "dialog", "text": "[askstring] Edit question: Option 4: → 1/4"}
+{"t": 156.48, "step": 77, "kind": "dialog", "text": "[askstring] Edit question: Correct answer: → 3/4"}
+{"t": 158.3, "step": 78, "kind": "screen", "texts": ["Question Bank (Admin)", "What is 1/2 + 1/4? 3/4", "What is 2/3 - 1/6 ? 1/2", "What is 3/4 + 1/2 ? 5/4", "What fraction equals 0.5 ? 1/2", "What is 5/6 - 1/3 ? 1/2", "What is 1/5 + 2/5 ? 3/5", "What is 2/3 * 3/4 ? 1/2", "What is 1/2 + 1/4? 3/4", "What is 1/2 + 1/4? 3/4", "What is 1/2 + 1/4? 3/4", "Add", "Edit", "Delete", "Back"], "buttons": ["Add", "Edit", "Delete", "Back"], "entries": 0, "radios": []}
+{"t": 158.45, "step": 78, "kind": "action", "summary": "step 78: selected the first row of the list, clicked 'Back'", "answers_seen": ["3/4", "1/2", "5/4", "1/2", "3/5", "1/2", "3/4", "3/4", "3/4"]}
+{"t": 160.33, "step": 79, "kind": "screen", "texts": ["Space Fractions", "Player: admin", "Play Game", "View Score", "View Help", "Admin (Update Questions)", "Admin Login", "Quit"], "buttons": ["Play Game", "View Score", "View Help", "Admin (Update Questions)", "Admin Login", "Quit"], "entries": 0, "radios": []}
+{"t": 160.49, "step": 79, "kind": "action", "summary": "step 79: clicked 'Play Game'", "answers_seen": []}
+{"t": 162.33, "step": 80, "kind": "screen", "texts": ["Question 1 of 6   |   Score: 0", "What is 1/2 + 1/4?", "3/4", "1/2", "2/3", "1/4", "Pause", "Quit to Menu"], "buttons": ["3/4", "1/2", "2/3", "1/4", "Pause", "Quit to Menu"], "entries": 0, "radios": []}
+{"t": 162.47, "step": 80, "kind": "action", "summary": "step 80: clicked '3/4'", "answers_seen": ["3/4"]}
+{"t": 164.27, "step": 80, "kind": "end", "text": "end of play: clicking 'Quit to Menu'"}

@@ -1,0 +1,5 @@
+●  Study architecture spec and inputs
+●  Create project structure and core domain modules (models, components, persistence)
+●  Implement Tkinter desktop UI (movie, menu, game, ending scenes)
+●  Write tests and README/requirements
+●  Compile, test, and finish

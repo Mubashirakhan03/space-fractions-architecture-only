@@ -1,0 +1,6 @@
+# Space Fractions - runtime dependencies
+# Uses only Python standard library modules (tkinter, sqlite3, etc.).
+# No third-party packages required.
+
+# Development / testing only:
+pytest>=7.0

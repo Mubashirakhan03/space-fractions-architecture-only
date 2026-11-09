@@ -1,0 +1,8 @@
+●  Create domain model (Game, Question, User, Admin) with dataclasses
+●  Create persistence layer (SQLite) for questions/games/users
+●  Create game logic (state machine, scoring, fraction question generation)
+●  Create Tkinter UI (menu, intro, game, score, admin)
+●  Create main.py entry point
+●  Write tests with pytest
+●  Write requirements.txt, README.md, AGENT_NOTES.md
+●  Run compile and test, fix failures

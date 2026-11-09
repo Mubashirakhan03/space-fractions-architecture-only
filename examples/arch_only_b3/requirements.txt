@@ -1,0 +1,2 @@
+# Space Fractions uses only the Python standard library (tkinter, sqlite3, etc.).
+# No third-party runtime dependencies required.

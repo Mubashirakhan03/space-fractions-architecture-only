@@ -1,0 +1,82 @@
+Timeout (0:00:40)!
+Thread 0x00005afc (most recent call first):
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\winrec.py", line 57 in capture
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\winrec.py", line 125 in _run
+  File "C:\Python312\Lib\threading.py", line 1012 in run
+  File "C:\Python312\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Python312\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00003d88 (most recent call first):
+  File "C:\Python312\Lib\tkinter\__init__.py", line 1505 in mainloop
+  File "C:\Users\Eocean\AppData\Local\Temp\sf_play__e5jqtr9\app\main.py", line 14 in main
+  File "C:\Users\Eocean\AppData\Local\Temp\sf_play__e5jqtr9\app\main.py", line 18 in <module>
+  File "<frozen runpy>", line 88 in _run_code
+  File "<frozen runpy>", line 98 in _run_module_code
+  File "<frozen runpy>", line 287 in run_path
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 421 in child
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 479 in main
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 502 in <module>
+Timeout (0:00:40)!
+Thread 0x00005afc (most recent call first):
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\winrec.py", line 129 in _run
+  File "C:\Python312\Lib\threading.py", line 1012 in run
+  File "C:\Python312\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Python312\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00003d88 (most recent call first):
+  File "C:\Python312\Lib\tkinter\__init__.py", line 1505 in mainloop
+  File "C:\Users\Eocean\AppData\Local\Temp\sf_play__e5jqtr9\app\main.py", line 14 in main
+  File "C:\Users\Eocean\AppData\Local\Temp\sf_play__e5jqtr9\app\main.py", line 18 in <module>
+  File "<frozen runpy>", line 88 in _run_code
+  File "<frozen runpy>", line 98 in _run_module_code
+  File "<frozen runpy>", line 287 in run_path
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 421 in child
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 479 in main
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 502 in <module>
+Timeout (0:00:40)!
+Thread 0x00005afc (most recent call first):
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\winrec.py", line 57 in capture
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\winrec.py", line 125 in _run
+  File "C:\Python312\Lib\threading.py", line 1012 in run
+  File "C:\Python312\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Python312\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00003d88 (most recent call first):
+  File "C:\Python312\Lib\subprocess.py", line 1590 in _wait
+  File "C:\Python312\Lib\subprocess.py", line 1264 in wait
+  File "C:\Python312\Lib\subprocess.py", line 1201 in communicate
+  File "C:\Python312\Lib\subprocess.py", line 550 in run
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\winrec.py", line 84 in save_png
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 247 in shot
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 283 in act
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 375 in loop
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 379 in <lambda>
+  File "C:\Python312\Lib\tkinter\__init__.py", line 862 in callit
+  File "C:\Python312\Lib\tkinter\__init__.py", line 1968 in __call__
+  File "C:\Python312\Lib\tkinter\__init__.py", line 1505 in mainloop
+  File "C:\Users\Eocean\AppData\Local\Temp\sf_play__e5jqtr9\app\main.py", line 14 in main
+  File "C:\Users\Eocean\AppData\Local\Temp\sf_play__e5jqtr9\app\main.py", line 18 in <module>
+  File "<frozen runpy>", line 88 in _run_code
+  File "<frozen runpy>", line 98 in _run_module_code
+  File "<frozen runpy>", line 287 in run_path
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 421 in child
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 479 in main
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 502 in <module>
+Timeout (0:00:40)!
+Thread 0x00005afc (most recent call first):
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\winrec.py", line 57 in capture
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\winrec.py", line 125 in _run
+  File "C:\Python312\Lib\threading.py", line 1012 in run
+  File "C:\Python312\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Python312\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00003d88 (most recent call first):
+  File "C:\Python312\Lib\tkinter\__init__.py", line 1505 in mainloop
+  File "C:\Users\Eocean\AppData\Local\Temp\sf_play__e5jqtr9\app\main.py", line 14 in main
+  File "C:\Users\Eocean\AppData\Local\Temp\sf_play__e5jqtr9\app\main.py", line 18 in <module>
+  File "<frozen runpy>", line 88 in _run_code
+  File "<frozen runpy>", line 98 in _run_module_code
+  File "<frozen runpy>", line 287 in run_path
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 421 in child
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 479 in main
+  File "D:\professor project\space-fractions-architecture-only\scripts\evidence\play_game.py", line 502 in <module>

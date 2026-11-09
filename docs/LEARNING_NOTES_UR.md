@@ -313,3 +313,17 @@ verification mein generic tareeqe se theek kiya — aakhri run mein 5 poore roun
   mein wajah likhe; OFF par kuch nahi kaha jata. Dono runs se aap ki report ke OP2 ka sawal check ho sakta hai.
 - **GitHub:** is folder ka koi remote nahi; push ho hi nahi sakta. Asal project aur GitHub waise hi hain.
 
+## Study runs b1–b3 (2026-11-09) — asaan alfaaz mein
+
+- **Kya kiya:** Agent B (sirf naqsha) ko teen dafa chalaya, har dafa naye khali folder mein. Agent ko beech mein
+  bilkul nahi badla (freeze). Teeno runs pass hue, har run takreeban $0.045 ka. Balance $0.77 se $0.63 reh gaya.
+- **Saboot (evidence):** har run ki video (agent ka GUI), har phase ka screenshot, har event ka log; phir ek bot ne
+  har game 80 qadam tak khela — us ki video, subtitles (har click likha hua) aur har screen ki tasveer.
+- **Bot kaisa hai:** game ke baare mein kuch nahi jaanta; jo button/field screen par hai wahi dabata hai, jaise
+  ek naya user. Sab games (A ka bhi) bilkul ek hi bot se khele gaye, taake muqabla barabar ho.
+- **Sab se aham nateeja (OP2):** naqsha PostgreSQL, Node.js, Docker waghera kehta hai; teeno runs ne SQLite aur
+  desktop banaya, lekin README/AGENT_NOTES mein **ek bhi** deviation nahi likha (0/12). Agent A ne likha tha kyunke
+  us ke prompt mein likhna zaroori tha. Yani hidayat na ho to deviations chhup jaate hain.
+- **Jo checks ne nahi pakra:** b1 mein intro par click kaam nahi karta (sirf key), b2 mein Edit nahi hai aur radio
+  buttons sab bhare dikhte hain, b3 mein login ka component hai magar istemaal nahi hota — Admin sab ke liye khula.
+  Agent ke tests sirf apna code check karte hain, naqsha nahi.

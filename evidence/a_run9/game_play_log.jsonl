@@ -1,0 +1,162 @@
+{"t": 2.81, "step": 0, "kind": "start", "text": "window 'Space Fractions' opened"}
+{"t": 4.32, "step": 1, "kind": "screen", "texts": ["SPACE FRACTIONS", "An adventure with fractions among the stars", "1/2", "3/4", "2/3", "Skip ▶"], "buttons": ["Skip ▶"], "entries": 0, "radios": []}
+{"t": 4.47, "step": 1, "kind": "action", "summary": "step 1: clicked 'Skip ▶'", "answers_seen": []}
+{"t": 6.28, "step": 2, "kind": "screen", "texts": ["SPACE FRACTIONS", "Choose your mission:", "▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "buttons": ["▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "entries": 0, "radios": []}
+{"t": 6.45, "step": 2, "kind": "action", "summary": "step 2: clicked '▶  Play Game'", "answers_seen": []}
+{"t": 8.34, "step": 3, "kind": "screen", "texts": ["Question 1 of 10   ·   Score: 0  ✓  |  0 ✗", "Which fraction is equivalent to 1/2?", "1/3", "2/4", "3/4", "2/3", "⏸ Pause", "Exit to Menu"], "buttons": ["1/3", "2/4", "3/4", "2/3", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 8.49, "step": 3, "kind": "action", "summary": "step 3: clicked '1/3'", "answers_seen": []}
+{"t": 10.37, "step": 4, "kind": "screen", "texts": ["Question 2 of 10   ·   Score: 0  ✓  |  1 ✗", "Reduce 6/8 to lowest terms.", "3/4", "6/8", "1/2", "2/4", "⏸ Pause", "Exit to Menu"], "buttons": ["3/4", "6/8", "1/2", "2/4", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 10.56, "step": 4, "kind": "action", "summary": "step 4: clicked '3/4'", "answers_seen": ["3/4", "3/4"]}
+{"t": 12.4, "step": 5, "kind": "screen", "texts": ["Question 3 of 10   ·   Score: 1  ✓  |  1 ✗", "Which fraction is shown by 1/2 of a circle?", "1/2", "1/3", "2/3", "1/4", "⏸ Pause", "Exit to Menu"], "buttons": ["1/2", "1/3", "2/3", "1/4", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 12.56, "step": 5, "kind": "action", "summary": "step 5: clicked '1/2'", "answers_seen": []}
+{"t": 14.36, "step": 6, "kind": "screen", "texts": ["Question 4 of 10   ·   Score: 2  ✓  |  1 ✗", "Which fraction is smaller: 1/2 or 2/3?", "1/2", "2/3", "⏸ Pause", "Exit to Menu"], "buttons": ["1/2", "2/3", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 14.53, "step": 6, "kind": "action", "summary": "step 6: clicked '2/3'", "answers_seen": []}
+{"t": 16.34, "step": 7, "kind": "screen", "texts": ["Question 5 of 10   ·   Score: 2  ✓  |  2 ✗", "Which fraction is equivalent to 1/3?", "2/6", "1/2", "3/4", "2/3", "⏸ Pause", "Exit to Menu"], "buttons": ["2/6", "1/2", "3/4", "2/3", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 16.47, "step": 7, "kind": "action", "summary": "step 7: clicked '2/6'", "answers_seen": []}
+{"t": 18.28, "step": 8, "kind": "screen", "texts": ["Question 6 of 10   ·   Score: 3  ✓  |  2 ✗", "Which fraction is larger: 2/3 or 3/4?", "2/3", "3/4", "⏸ Pause", "Exit to Menu"], "buttons": ["2/3", "3/4", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 18.43, "step": 8, "kind": "action", "summary": "step 8: clicked '⏸ Pause'", "answers_seen": []}
+{"t": 20.23, "step": 9, "kind": "screen", "texts": ["Question 6 of 10   ·   Score: 3  ✓  |  2 ✗", "Which fraction is larger: 2/3 or 3/4?", "2/3", "3/4", "Game paused. Press Resume to continue.", "▶ Resume", "Exit to Menu"], "buttons": ["2/3", "3/4", "▶ Resume", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 20.45, "step": 9, "kind": "action", "summary": "step 9: clicked '▶ Resume'", "answers_seen": []}
+{"t": 22.27, "step": 10, "kind": "screen", "texts": ["Question 6 of 10   ·   Score: 3  ✓  |  2 ✗", "Which fraction is larger: 2/3 or 3/4?", "2/3", "3/4", "⏸ Pause", "Exit to Menu"], "buttons": ["2/3", "3/4", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 22.39, "step": 10, "kind": "action", "summary": "step 10: clicked 'Exit to Menu'", "answers_seen": []}
+{"t": 24.2, "step": 11, "kind": "screen", "texts": ["SPACE FRACTIONS", "Choose your mission:", "▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "buttons": ["▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "entries": 0, "radios": []}
+{"t": 24.34, "step": 11, "kind": "action", "summary": "step 11: clicked '❓  View Help'", "answers_seen": []}
+{"t": 26.15, "step": 12, "kind": "screen", "texts": ["How to Play", "⬅  Back to Menu"], "buttons": ["⬅  Back to Menu"], "entries": 0, "radios": []}
+{"t": 26.3, "step": 12, "kind": "action", "summary": "step 12: clicked '⬅  Back to Menu'", "answers_seen": []}
+{"t": 28.11, "step": 13, "kind": "screen", "texts": ["SPACE FRACTIONS", "Choose your mission:", "▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "buttons": ["▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "entries": 0, "radios": []}
+{"t": 28.26, "step": 13, "kind": "action", "summary": "step 13: clicked '★  View Score'", "answers_seen": []}
+{"t": 30.08, "step": 14, "kind": "screen", "texts": ["Your Scores", "★ Best score: 0", "Last round score: 3", "⬅  Back to Menu"], "buttons": ["⬅  Back to Menu"], "entries": 0, "radios": []}
+{"t": 30.25, "step": 14, "kind": "action", "summary": "step 14: clicked '⬅  Back to Menu'", "answers_seen": []}
+{"t": 32.05, "step": 15, "kind": "screen", "texts": ["SPACE FRACTIONS", "Choose your mission:", "▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "buttons": ["▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "entries": 0, "radios": []}
+{"t": 32.43, "step": 15, "kind": "action", "summary": "step 15: clicked '🔒  Admin'", "answers_seen": []}
+{"t": 34.23, "step": 16, "kind": "screen", "texts": ["Admin Access", "Enter your PIN to manage questions:", "Unlock", "⬅  Back to Menu"], "buttons": ["Unlock", "⬅  Back to Menu"], "entries": 1, "radios": []}
+{"t": 34.39, "step": 16, "kind": "action", "summary": "step 16: typed 'store/', clicked 'Unlock'", "answers_seen": []}
+{"t": 36.21, "step": 17, "kind": "screen", "texts": ["Admin Access", "Enter your PIN to manage questions:", "Unlock", "❌ Incorrect PIN. Please try again.", "⬅  Back to Menu"], "buttons": ["Unlock", "⬅  Back to Menu"], "entries": 1, "radios": []}
+{"t": 36.42, "step": 17, "kind": "action", "summary": "step 17: clicked 'Unlock'", "answers_seen": []}
+{"t": 38.23, "step": 18, "kind": "screen", "texts": ["Admin Access", "Enter your PIN to manage questions:", "Unlock", "❌ Incorrect PIN. Please try again.", "⬅  Back to Menu"], "buttons": ["Unlock", "⬅  Back to Menu"], "entries": 1, "radios": []}
+{"t": 38.4, "step": 18, "kind": "action", "summary": "step 18: clicked '⬅  Back to Menu'", "answers_seen": []}
+{"t": 40.21, "step": 19, "kind": "screen", "texts": ["SPACE FRACTIONS", "Choose your mission:", "▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "buttons": ["▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "entries": 0, "radios": []}
+{"t": 40.34, "step": 19, "kind": "action", "summary": "step 19: clicked '▶  Play Game'", "answers_seen": []}
+{"t": 42.26, "step": 20, "kind": "screen", "texts": ["Question 1 of 10   ·   Score: 0  ✓  |  0 ✗", "Reduce 4/6 to lowest terms.", "2/3", "4/6", "1/3", "2/6", "⏸ Pause", "Exit to Menu"], "buttons": ["2/3", "4/6", "1/3", "2/6", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 42.44, "step": 20, "kind": "action", "summary": "step 20: clicked '2/3'", "answers_seen": ["2/3", "2/3"]}
+{"t": 44.24, "step": 21, "kind": "screen", "texts": ["Question 2 of 10   ·   Score: 1  ✓  |  0 ✗", "Which fraction is larger: 1/4 or 1/5?", "1/4", "1/5", "⏸ Pause", "Exit to Menu"], "buttons": ["1/4", "1/5", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 44.42, "step": 21, "kind": "action", "summary": "step 21: clicked '1/4'", "answers_seen": []}
+{"t": 46.28, "step": 22, "kind": "screen", "texts": ["Question 3 of 10   ·   Score: 2  ✓  |  0 ✗", "Which fraction is shown by 3/4 of a circle?", "1/4", "1/2", "3/4", "2/4", "⏸ Pause", "Exit to Menu"], "buttons": ["1/4", "1/2", "3/4", "2/4", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 46.44, "step": 22, "kind": "action", "summary": "step 22: clicked '2/4'", "answers_seen": []}
+{"t": 48.28, "step": 23, "kind": "screen", "texts": ["Question 4 of 10   ·   Score: 2  ✓  |  1 ✗", "Reduce 6/8 to lowest terms.", "3/4", "6/8", "1/2", "2/4", "⏸ Pause", "Exit to Menu"], "buttons": ["3/4", "6/8", "1/2", "2/4", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 48.43, "step": 23, "kind": "action", "summary": "step 23: clicked '3/4'", "answers_seen": ["3/4", "3/4"]}
+{"t": 50.24, "step": 24, "kind": "screen", "texts": ["Question 5 of 10   ·   Score: 3  ✓  |  1 ✗", "Reduce 2/4 to lowest terms.", "1/2", "2/4", "1/4", "4/8", "⏸ Pause", "Exit to Menu"], "buttons": ["1/2", "2/4", "1/4", "4/8", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 50.41, "step": 24, "kind": "action", "summary": "step 24: clicked '1/2'", "answers_seen": ["1/2", "1/2"]}
+{"t": 52.3, "step": 25, "kind": "screen", "texts": ["Question 6 of 10   ·   Score: 4  ✓  |  1 ✗", "What is 2/3 - 1/3?", "1/3", "1/6", "1/2", "2/3", "⏸ Pause", "Exit to Menu"], "buttons": ["1/3", "1/6", "1/2", "2/3", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 52.48, "step": 25, "kind": "action", "summary": "step 25: clicked '1/3'", "answers_seen": ["1/3"]}
+{"t": 54.3, "step": 26, "kind": "screen", "texts": ["Question 7 of 10   ·   Score: 5  ✓  |  1 ✗", "What is 1/5 + 2/5?", "3/5", "3/10", "1/5", "2/5", "⏸ Pause", "Exit to Menu"], "buttons": ["3/5", "3/10", "1/5", "2/5", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 54.5, "step": 26, "kind": "action", "summary": "step 26: clicked '3/5'", "answers_seen": ["3/5"]}
+{"t": 56.31, "step": 27, "kind": "screen", "texts": ["Question 8 of 10   ·   Score: 6  ✓  |  1 ✗", "What is 3/4 - 1/4?", "1/2", "2/4", "1/4", "1/3", "⏸ Pause", "Exit to Menu"], "buttons": ["1/2", "2/4", "1/4", "1/3", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 56.45, "step": 27, "kind": "action", "summary": "step 27: clicked '1/2'", "answers_seen": ["1/2"]}
+{"t": 58.32, "step": 28, "kind": "screen", "texts": ["Question 9 of 10   ·   Score: 7  ✓  |  1 ✗", "What is 4/5 - 1/5?", "3/5", "5/5", "2/5", "1/5", "⏸ Pause", "Exit to Menu"], "buttons": ["3/5", "5/5", "2/5", "1/5", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 58.46, "step": 28, "kind": "action", "summary": "step 28: clicked '3/5'", "answers_seen": ["3/5"]}
+{"t": 60.33, "step": 29, "kind": "screen", "texts": ["Question 10 of 10   ·   Score: 8  ✓  |  1 ✗", "Which fraction is shown by 1/3 of a square?", "1/2", "1/3", "1/4", "2/3", "⏸ Pause", "Exit to Menu"], "buttons": ["1/2", "1/3", "1/4", "2/3", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 60.54, "step": 29, "kind": "action", "summary": "step 29: clicked '1/4'", "answers_seen": []}
+{"t": 62.34, "step": 30, "kind": "screen", "texts": ["Mission Complete", "Score: 8 / 10", "Correct: 8   ·   Wrong: 2", "Outstanding! You are a fraction superstar! ⭐⭐⭐", "▶  Play Again", "🏠  Main Menu"], "buttons": ["▶  Play Again", "🏠  Main Menu"], "entries": 0, "radios": []}
+{"t": 62.51, "step": 30, "kind": "action", "summary": "step 30: clicked '▶  Play Again'", "answers_seen": []}
+{"t": 64.34, "step": 31, "kind": "screen", "texts": ["Question 1 of 10   ·   Score: 0  ✓  |  0 ✗", "Which fraction is larger: 1/2 or 1/3?", "1/2", "1/3", "⏸ Pause", "Exit to Menu"], "buttons": ["1/2", "1/3", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 64.49, "step": 31, "kind": "action", "summary": "step 31: clicked '⏸ Pause'", "answers_seen": []}
+{"t": 66.29, "step": 32, "kind": "screen", "texts": ["Question 1 of 10   ·   Score: 0  ✓  |  0 ✗", "Which fraction is larger: 1/2 or 1/3?", "1/2", "1/3", "Game paused. Press Resume to continue.", "▶ Resume", "Exit to Menu"], "buttons": ["1/2", "1/3", "▶ Resume", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 66.44, "step": 32, "kind": "action", "summary": "step 32: clicked '▶ Resume'", "answers_seen": []}
+{"t": 68.24, "step": 33, "kind": "screen", "texts": ["Question 1 of 10   ·   Score: 0  ✓  |  0 ✗", "Which fraction is larger: 1/2 or 1/3?", "1/2", "1/3", "⏸ Pause", "Exit to Menu"], "buttons": ["1/2", "1/3", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 68.41, "step": 33, "kind": "action", "summary": "step 33: clicked 'Exit to Menu'", "answers_seen": []}
+{"t": 70.22, "step": 34, "kind": "screen", "texts": ["SPACE FRACTIONS", "Choose your mission:", "▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "buttons": ["▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "entries": 0, "radios": []}
+{"t": 70.37, "step": 34, "kind": "action", "summary": "step 34: clicked '❓  View Help'", "answers_seen": []}
+{"t": 72.18, "step": 35, "kind": "screen", "texts": ["How to Play", "⬅  Back to Menu"], "buttons": ["⬅  Back to Menu"], "entries": 0, "radios": []}
+{"t": 72.33, "step": 35, "kind": "action", "summary": "step 35: clicked '⬅  Back to Menu'", "answers_seen": []}
+{"t": 74.14, "step": 36, "kind": "screen", "texts": ["SPACE FRACTIONS", "Choose your mission:", "▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "buttons": ["▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "entries": 0, "radios": []}
+{"t": 74.3, "step": 36, "kind": "action", "summary": "step 36: clicked '★  View Score'", "answers_seen": []}
+{"t": 76.12, "step": 37, "kind": "screen", "texts": ["Your Scores", "★ Best score: 8", "Last round score: 0", "⬅  Back to Menu"], "buttons": ["⬅  Back to Menu"], "entries": 0, "radios": []}
+{"t": 76.29, "step": 37, "kind": "action", "summary": "step 37: clicked '⬅  Back to Menu'", "answers_seen": []}
+{"t": 78.11, "step": 38, "kind": "screen", "texts": ["SPACE FRACTIONS", "Choose your mission:", "▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "buttons": ["▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "entries": 0, "radios": []}
+{"t": 78.27, "step": 38, "kind": "action", "summary": "step 38: clicked '🔒  Admin'", "answers_seen": []}
+{"t": 80.09, "step": 39, "kind": "screen", "texts": ["Admin Access", "Enter your PIN to manage questions:", "Unlock", "⬅  Back to Menu"], "buttons": ["Unlock", "⬅  Back to Menu"], "entries": 1, "radios": []}
+{"t": 80.25, "step": 39, "kind": "action", "summary": "step 39: typed 'store/', clicked 'Unlock'", "answers_seen": []}
+{"t": 82.15, "step": 40, "kind": "screen", "texts": ["Admin Access", "Enter your PIN to manage questions:", "Unlock", "❌ Incorrect PIN. Please try again.", "⬅  Back to Menu"], "buttons": ["Unlock", "⬅  Back to Menu"], "entries": 1, "radios": []}
+{"t": 82.3, "step": 40, "kind": "action", "summary": "step 40: clicked 'Unlock'", "answers_seen": []}
+{"t": 84.15, "step": 41, "kind": "screen", "texts": ["Admin Access", "Enter your PIN to manage questions:", "Unlock", "❌ Incorrect PIN. Please try again.", "⬅  Back to Menu"], "buttons": ["Unlock", "⬅  Back to Menu"], "entries": 1, "radios": []}
+{"t": 84.32, "step": 41, "kind": "action", "summary": "step 41: clicked '⬅  Back to Menu'", "answers_seen": []}
+{"t": 86.13, "step": 42, "kind": "screen", "texts": ["SPACE FRACTIONS", "Choose your mission:", "▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "buttons": ["▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "entries": 0, "radios": []}
+{"t": 86.34, "step": 42, "kind": "action", "summary": "step 42: clicked '▶  Play Game'", "answers_seen": []}
+{"t": 88.15, "step": 43, "kind": "screen", "texts": ["Question 1 of 10   ·   Score: 0  ✓  |  0 ✗", "Which fraction is equivalent to 2/3?", "4/6", "1/2", "2/4", "3/4", "⏸ Pause", "Exit to Menu"], "buttons": ["4/6", "1/2", "2/4", "3/4", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 88.29, "step": 43, "kind": "action", "summary": "step 43: clicked '4/6'", "answers_seen": []}
+{"t": 90.17, "step": 44, "kind": "screen", "texts": ["Question 2 of 10   ·   Score: 1  ✓  |  0 ✗", "What is 1/5 + 2/5?", "3/5", "3/10", "1/5", "2/5", "⏸ Pause", "Exit to Menu"], "buttons": ["3/5", "3/10", "1/5", "2/5", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 90.31, "step": 44, "kind": "action", "summary": "step 44: clicked '3/5'", "answers_seen": ["3/5"]}
+{"t": 92.13, "step": 45, "kind": "screen", "texts": ["Question 3 of 10   ·   Score: 2  ✓  |  0 ✗", "Which fraction is larger: 1/2 or 1/3?", "1/2", "1/3", "⏸ Pause", "Exit to Menu"], "buttons": ["1/2", "1/3", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 92.28, "step": 45, "kind": "action", "summary": "step 45: clicked '1/3'", "answers_seen": []}
+{"t": 94.09, "step": 46, "kind": "screen", "texts": ["Question 4 of 10   ·   Score: 2  ✓  |  1 ✗", "What is 1/4 + 1/4?", "1/2", "1/8", "2/8", "1/4", "⏸ Pause", "Exit to Menu"], "buttons": ["1/2", "1/8", "2/8", "1/4", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 94.26, "step": 46, "kind": "action", "summary": "step 46: clicked '1/2'", "answers_seen": ["1/2"]}
+{"t": 96.19, "step": 47, "kind": "screen", "texts": ["Question 5 of 10   ·   Score: 3  ✓  |  1 ✗", "What is 4/5 - 1/5?", "3/5", "5/5", "2/5", "1/5", "⏸ Pause", "Exit to Menu"], "buttons": ["3/5", "5/5", "2/5", "1/5", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 96.41, "step": 47, "kind": "action", "summary": "step 47: clicked '3/5'", "answers_seen": ["3/5"]}
+{"t": 98.22, "step": 48, "kind": "screen", "texts": ["Question 6 of 10   ·   Score: 4  ✓  |  1 ✗", "Which fraction is larger: 2/3 or 3/4?", "2/3", "3/4", "⏸ Pause", "Exit to Menu"], "buttons": ["2/3", "3/4", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 98.36, "step": 48, "kind": "action", "summary": "step 48: clicked '2/3'", "answers_seen": []}
+{"t": 100.17, "step": 49, "kind": "screen", "texts": ["Question 7 of 10   ·   Score: 4  ✓  |  2 ✗", "What is 1/2 + 1/4?", "2/6", "3/4", "1/4", "1/2", "⏸ Pause", "Exit to Menu"], "buttons": ["2/6", "3/4", "1/4", "1/2", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 100.34, "step": 49, "kind": "action", "summary": "step 49: clicked '3/4'", "answers_seen": ["3/4"]}
+{"t": 102.23, "step": 50, "kind": "screen", "texts": ["Question 8 of 10   ·   Score: 5  ✓  |  2 ✗", "Which fraction is equivalent to 1/3?", "2/6", "1/2", "3/4", "2/3", "⏸ Pause", "Exit to Menu"], "buttons": ["2/6", "1/2", "3/4", "2/3", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 102.41, "step": 50, "kind": "action", "summary": "step 50: clicked '2/6'", "answers_seen": []}
+{"t": 104.24, "step": 51, "kind": "screen", "texts": ["Question 9 of 10   ·   Score: 6  ✓  |  2 ✗", "Which fraction is shown by 3/4 of a circle?", "1/4", "1/2", "3/4", "2/4", "⏸ Pause", "Exit to Menu"], "buttons": ["1/4", "1/2", "3/4", "2/4", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 104.4, "step": 51, "kind": "action", "summary": "step 51: clicked '2/4'", "answers_seen": []}
+{"t": 106.2, "step": 52, "kind": "screen", "texts": ["Question 10 of 10   ·   Score: 6  ✓  |  3 ✗", "Which fraction is larger: 1/4 or 1/5?", "1/4", "1/5", "⏸ Pause", "Exit to Menu"], "buttons": ["1/4", "1/5", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 106.34, "step": 52, "kind": "action", "summary": "step 52: clicked '1/5'", "answers_seen": []}
+{"t": 108.14, "step": 53, "kind": "screen", "texts": ["Mission Complete", "Score: 6 / 10", "Correct: 6   ·   Wrong: 4", "Good work, space explorer! ⭐⭐", "▶  Play Again", "🏠  Main Menu"], "buttons": ["▶  Play Again", "🏠  Main Menu"], "entries": 0, "radios": []}
+{"t": 108.28, "step": 53, "kind": "action", "summary": "step 53: clicked '▶  Play Again'", "answers_seen": []}
+{"t": 110.09, "step": 54, "kind": "screen", "texts": ["Question 1 of 10   ·   Score: 0  ✓  |  0 ✗", "Reduce 2/4 to lowest terms.", "1/2", "2/4", "1/4", "4/8", "⏸ Pause", "Exit to Menu"], "buttons": ["1/2", "2/4", "1/4", "4/8", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 110.22, "step": 54, "kind": "action", "summary": "step 54: clicked '1/2'", "answers_seen": ["1/2", "1/2"]}
+{"t": 112.04, "step": 55, "kind": "screen", "texts": ["Question 2 of 10   ·   Score: 1  ✓  |  0 ✗", "Which fraction is smaller: 1/2 or 2/3?", "1/2", "2/3", "⏸ Pause", "Exit to Menu"], "buttons": ["1/2", "2/3", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 112.18, "step": 55, "kind": "action", "summary": "step 55: clicked '⏸ Pause'", "answers_seen": []}
+{"t": 113.99, "step": 56, "kind": "screen", "texts": ["Question 2 of 10   ·   Score: 1  ✓  |  0 ✗", "Which fraction is smaller: 1/2 or 2/3?", "1/2", "2/3", "Game paused. Press Resume to continue.", "▶ Resume", "Exit to Menu"], "buttons": ["1/2", "2/3", "▶ Resume", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 114.18, "step": 56, "kind": "action", "summary": "step 56: clicked '▶ Resume'", "answers_seen": []}
+{"t": 115.99, "step": 57, "kind": "screen", "texts": ["Question 2 of 10   ·   Score: 1  ✓  |  0 ✗", "Which fraction is smaller: 1/2 or 2/3?", "1/2", "2/3", "⏸ Pause", "Exit to Menu"], "buttons": ["1/2", "2/3", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 116.11, "step": 57, "kind": "action", "summary": "step 57: clicked 'Exit to Menu'", "answers_seen": []}
+{"t": 117.92, "step": 58, "kind": "screen", "texts": ["SPACE FRACTIONS", "Choose your mission:", "▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "buttons": ["▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "entries": 0, "radios": []}
+{"t": 118.06, "step": 58, "kind": "action", "summary": "step 58: clicked '❓  View Help'", "answers_seen": []}
+{"t": 119.86, "step": 59, "kind": "screen", "texts": ["How to Play", "⬅  Back to Menu"], "buttons": ["⬅  Back to Menu"], "entries": 0, "radios": []}
+{"t": 120.04, "step": 59, "kind": "action", "summary": "step 59: clicked '⬅  Back to Menu'", "answers_seen": []}
+{"t": 121.85, "step": 60, "kind": "screen", "texts": ["SPACE FRACTIONS", "Choose your mission:", "▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "buttons": ["▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "entries": 0, "radios": []}
+{"t": 121.99, "step": 60, "kind": "action", "summary": "step 60: clicked '★  View Score'", "answers_seen": []}
+{"t": 123.81, "step": 61, "kind": "screen", "texts": ["Your Scores", "★ Best score: 8", "Last round score: 1", "⬅  Back to Menu"], "buttons": ["⬅  Back to Menu"], "entries": 0, "radios": []}
+{"t": 123.95, "step": 61, "kind": "action", "summary": "step 61: clicked '⬅  Back to Menu'", "answers_seen": []}
+{"t": 125.99, "step": 62, "kind": "screen", "texts": ["SPACE FRACTIONS", "Choose your mission:", "▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "buttons": ["▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "entries": 0, "radios": []}
+{"t": 126.12, "step": 62, "kind": "action", "summary": "step 62: clicked '🔒  Admin'", "answers_seen": []}
+{"t": 127.93, "step": 63, "kind": "screen", "texts": ["Admin Access", "Enter your PIN to manage questions:", "Unlock", "⬅  Back to Menu"], "buttons": ["Unlock", "⬅  Back to Menu"], "entries": 1, "radios": []}
+{"t": 128.07, "step": 63, "kind": "action", "summary": "step 63: typed 'store/', clicked '⬅  Back to Menu'", "answers_seen": []}
+{"t": 129.87, "step": 64, "kind": "screen", "texts": ["SPACE FRACTIONS", "Choose your mission:", "▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "buttons": ["▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "entries": 0, "radios": []}
+{"t": 130.0, "step": 64, "kind": "action", "summary": "step 64: clicked '▶  Play Game'", "answers_seen": []}
+{"t": 131.8, "step": 65, "kind": "screen", "texts": ["Question 1 of 10   ·   Score: 0  ✓  |  0 ✗", "Reduce 4/6 to lowest terms.", "2/3", "4/6", "1/3", "2/6", "⏸ Pause", "Exit to Menu"], "buttons": ["2/3", "4/6", "1/3", "2/6", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 131.93, "step": 65, "kind": "action", "summary": "step 65: clicked '2/3'", "answers_seen": ["2/3", "2/3"]}
+{"t": 133.75, "step": 66, "kind": "screen", "texts": ["Question 2 of 10   ·   Score: 1  ✓  |  0 ✗", "Reduce 6/8 to lowest terms.", "3/4", "6/8", "1/2", "2/4", "⏸ Pause", "Exit to Menu"], "buttons": ["3/4", "6/8", "1/2", "2/4", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 133.95, "step": 66, "kind": "action", "summary": "step 66: clicked '3/4'", "answers_seen": ["3/4", "3/4"]}
+{"t": 135.76, "step": 67, "kind": "screen", "texts": ["Question 3 of 10   ·   Score: 2  ✓  |  0 ✗", "Which fraction is smaller: 1/2 or 2/3?", "1/2", "2/3", "⏸ Pause", "Exit to Menu"], "buttons": ["1/2", "2/3", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 136.0, "step": 67, "kind": "action", "summary": "step 67: clicked '⏸ Pause'", "answers_seen": []}
+{"t": 137.81, "step": 68, "kind": "screen", "texts": ["Question 3 of 10   ·   Score: 2  ✓  |  0 ✗", "Which fraction is smaller: 1/2 or 2/3?", "1/2", "2/3", "Game paused. Press Resume to continue.", "▶ Resume", "Exit to Menu"], "buttons": ["1/2", "2/3", "▶ Resume", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 138.0, "step": 68, "kind": "action", "summary": "step 68: clicked '▶ Resume'", "answers_seen": []}
+{"t": 139.8, "step": 69, "kind": "screen", "texts": ["Question 3 of 10   ·   Score: 2  ✓  |  0 ✗", "Which fraction is smaller: 1/2 or 2/3?", "1/2", "2/3", "⏸ Pause", "Exit to Menu"], "buttons": ["1/2", "2/3", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 140.01, "step": 69, "kind": "action", "summary": "step 69: clicked 'Exit to Menu'", "answers_seen": []}
+{"t": 141.82, "step": 70, "kind": "screen", "texts": ["SPACE FRACTIONS", "Choose your mission:", "▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "buttons": ["▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "entries": 0, "radios": []}
+{"t": 141.97, "step": 70, "kind": "action", "summary": "step 70: clicked '❓  View Help'", "answers_seen": []}
+{"t": 143.78, "step": 71, "kind": "screen", "texts": ["How to Play", "⬅  Back to Menu"], "buttons": ["⬅  Back to Menu"], "entries": 0, "radios": []}
+{"t": 143.92, "step": 71, "kind": "action", "summary": "step 71: clicked '⬅  Back to Menu'", "answers_seen": []}
+{"t": 145.72, "step": 72, "kind": "screen", "texts": ["SPACE FRACTIONS", "Choose your mission:", "▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "buttons": ["▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "entries": 0, "radios": []}
+{"t": 145.94, "step": 72, "kind": "action", "summary": "step 72: clicked '★  View Score'", "answers_seen": []}
+{"t": 147.75, "step": 73, "kind": "screen", "texts": ["Your Scores", "★ Best score: 8", "Last round score: 2", "⬅  Back to Menu"], "buttons": ["⬅  Back to Menu"], "entries": 0, "radios": []}
+{"t": 147.91, "step": 73, "kind": "action", "summary": "step 73: clicked '⬅  Back to Menu'", "answers_seen": []}
+{"t": 149.73, "step": 74, "kind": "screen", "texts": ["SPACE FRACTIONS", "Choose your mission:", "▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "buttons": ["▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "entries": 0, "radios": []}
+{"t": 149.9, "step": 74, "kind": "action", "summary": "step 74: clicked '🔒  Admin'", "answers_seen": []}
+{"t": 151.71, "step": 75, "kind": "screen", "texts": ["Admin Access", "Enter your PIN to manage questions:", "Unlock", "⬅  Back to Menu"], "buttons": ["Unlock", "⬅  Back to Menu"], "entries": 1, "radios": []}
+{"t": 151.88, "step": 75, "kind": "action", "summary": "step 75: typed 'store/', clicked 'Unlock'", "answers_seen": []}
+{"t": 153.86, "step": 76, "kind": "screen", "texts": ["Admin Access", "Enter your PIN to manage questions:", "Unlock", "❌ Incorrect PIN. Please try again.", "⬅  Back to Menu"], "buttons": ["Unlock", "⬅  Back to Menu"], "entries": 1, "radios": []}
+{"t": 154.03, "step": 76, "kind": "action", "summary": "step 76: clicked 'Unlock'", "answers_seen": []}
+{"t": 155.84, "step": 77, "kind": "screen", "texts": ["Admin Access", "Enter your PIN to manage questions:", "Unlock", "❌ Incorrect PIN. Please try again.", "⬅  Back to Menu"], "buttons": ["Unlock", "⬅  Back to Menu"], "entries": 1, "radios": []}
+{"t": 156.02, "step": 77, "kind": "action", "summary": "step 77: clicked 'Unlock'", "answers_seen": []}
+{"t": 157.87, "step": 78, "kind": "screen", "texts": ["Admin Access", "Enter your PIN to manage questions:", "Unlock", "❌ Incorrect PIN. Please try again.", "⬅  Back to Menu"], "buttons": ["Unlock", "⬅  Back to Menu"], "entries": 1, "radios": []}
+{"t": 158.03, "step": 78, "kind": "action", "summary": "step 78: clicked '⬅  Back to Menu'", "answers_seen": []}
+{"t": 159.85, "step": 79, "kind": "screen", "texts": ["SPACE FRACTIONS", "Choose your mission:", "▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "buttons": ["▶  Play Game", "❓  View Help", "★  View Score", "🔒  Admin"], "entries": 0, "radios": []}
+{"t": 160.01, "step": 79, "kind": "action", "summary": "step 79: clicked '▶  Play Game'", "answers_seen": []}
+{"t": 161.82, "step": 80, "kind": "screen", "texts": ["Question 1 of 10   ·   Score: 0  ✓  |  0 ✗", "Which fraction is equivalent to 3/4?", "6/8", "3/8", "2/4", "1/2", "⏸ Pause", "Exit to Menu"], "buttons": ["6/8", "3/8", "2/4", "1/2", "⏸ Pause", "Exit to Menu"], "entries": 0, "radios": []}
+{"t": 162.0, "step": 80, "kind": "action", "summary": "step 80: clicked '6/8'", "answers_seen": []}
+{"t": 163.82, "step": 80, "kind": "end", "text": "end of play: closing the window"}
