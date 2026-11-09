@@ -382,6 +382,6 @@ Original inputs are also kept untouched in `D:\professor project\Task1\`.
 
 ### 2026-11-09 — Own GitHub repository (user request)
 - The user asked for a separate GitHub repository for this variant with all files and logs.
-- Created https://github.com/Mubashirakhan03/space-fractions-architecture-only (public), `origin` set to it, `main` pushed; exe attached to release `v1.0.1-arch`.
+- Created https://github.com/Mubashirakhan03/space-fractions-architecture-only (public), `origin` set to it, `main` pushed (all code, docs, logs and example transcripts). No release yet; the push to `main` runs the CI build, whose exe is downloadable as an Actions artifact.
 - The original repository https://github.com/Mubashirakhan03/space-fractions-code-agent is not changed.
 - Rollback: `gh repo delete Mubashirakhan03/space-fractions-architecture-only` (and `git remote remove origin`).
