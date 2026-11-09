@@ -1,13 +1,13 @@
 # Space Fractions Code Agent — architecture-only variant
 
-> **This folder is a local research variant, not the published project.** The agent here receives **only the
+> **This repository is a research variant of [space-fractions-code-agent](https://github.com/Mubashirakhan03/space-fractions-code-agent) (v1.0.1).** The agent here receives **only the
 > architecture** (the architecture document and its UML views) plus the task's fixed conditions (desktop app,
 > Python standard library, source + requirements.txt + README + tests). All requirements that were added later
 > in the original project (animated intro, admin PIN, admin list, seed data, UI style rules, task profile, the
 > harness's own platform analysis) are removed, and verification only checks that the program runs.
 > One switch decides whether the agent is told to record its deviations from the architecture.
 > Design and details: [`docs/EXPERIMENT.md`](docs/EXPERIMENT.md) · exact model input:
-> [`docs/MODEL_INPUT.md`](docs/MODEL_INPUT.md). Exe: `dist\SpaceFractionsArchOnly.exe` (built locally).
+> [`docs/MODEL_INPUT.md`](docs/MODEL_INPUT.md). Exe: `SpaceFractionsArchOnly.exe` on the Releases page.
 >
 > Everything below this box describes the **original** agent (v1.0.1) this variant was copied from; its
 > `examples/` runs were produced **with** the extra requirements and serve as the comparison point.

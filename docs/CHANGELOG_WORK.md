@@ -353,7 +353,7 @@ Original inputs are also kept untouched in `D:\professor project\Task1\`.
 
 ---
 
-# Architecture-only variant (separate local folder `space-fractions-architecture-only`, no GitHub remote)
+# Architecture-only variant (separate folder and repo `space-fractions-architecture-only`)
 
 ### 2026-11-09 — Variant created from v1.0.1 (commit 283156b)
 - Why: the user's research needs an agent that builds the application from the architecture alone, with no
@@ -379,3 +379,9 @@ Original inputs are also kept untouched in `D:\professor project\Task1\`.
 
 - Exe: `profiles` removed from the PyInstaller spec and `list_profiles()` from the controller; built
   `dist/SpaceFractionsArchOnly.exe` (26.5 MB), verify_exe 6/6 PASSED without Python.
+
+### 2026-11-09 — Own GitHub repository (user request)
+- The user asked for a separate GitHub repository for this variant with all files and logs.
+- Created https://github.com/Mubashirakhan03/space-fractions-architecture-only (public), `origin` set to it, `main` pushed; exe attached to release `v1.0.1-arch`.
+- The original repository https://github.com/Mubashirakhan03/space-fractions-code-agent is not changed.
+- Rollback: `gh repo delete Mubashirakhan03/space-fractions-architecture-only` (and `git remote remove origin`).

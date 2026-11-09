@@ -7,7 +7,7 @@ The original agent (repository `space-fractions-code-agent`, release v1.0.1) was
 those improvements were *requirements* added by the user and the developer (an animated intro, an admin PIN, an
 admin list with Add / Edit / Delete, ≥ 20 seed questions, random rounds, a kid-friendly look…). They made the
 generated game better, but they also mean the result no longer shows what the agent makes **from the architecture
-alone**. This variant removes all of them. It lives in a separate local folder and is not pushed to GitHub.
+alone**. This variant removes all of them. It lives in its own repository (https://github.com/Mubashirakhan03/space-fractions-architecture-only); the original repository (https://github.com/Mubashirakhan03/space-fractions-code-agent) stays as it was.
 
 ## What the model receives
 

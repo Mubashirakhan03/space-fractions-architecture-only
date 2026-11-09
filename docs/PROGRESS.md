@@ -2,7 +2,7 @@
 
 Read this first when resuming work in a new session.
 
-> **This folder is the ARCHITECTURE-ONLY variant** (local only, no GitHub remote — never push). See
+> **This folder is the ARCHITECTURE-ONLY variant** (own GitHub repo https://github.com/Mubashirakhan03/space-fractions-architecture-only; the original repo https://github.com/Mubashirakhan03/space-fractions-code-agent is not changed by this variant). See
 > `docs/EXPERIMENT.md`. Status 2026-11-09: variant built and tested (175 passed); no real run yet — ask the user
 > before every paid run. The rest of this file describes the original project it was copied from.
 
